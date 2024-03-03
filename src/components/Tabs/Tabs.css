@@ -1,0 +1,13 @@
+.tabs-container{
+    display: flex;
+}
+.tabs-container__all{
+    border-bottom: 1px solid black;
+}
+.tabs-container__favorites{
+    padding: 0px 10px;
+}
+.tabs-container__all:hover, .tabs-container__favorites:hover, .tabs-container__popular:hover{
+    color: blue;
+    cursor: pointer;
+}

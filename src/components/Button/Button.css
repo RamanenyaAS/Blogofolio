@@ -1,0 +1,10 @@
+.button-primary {
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+.button-secondary {
+    padding: 20px;
+    background-color: rgb(0, 191, 255);
+    border: 1px solid black;
+}
