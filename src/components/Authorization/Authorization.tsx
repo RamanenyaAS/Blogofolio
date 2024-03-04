@@ -3,7 +3,7 @@ import './Authorization.css'
 function Authorization() {
     return ( 
         <>
-        <div>Sign In</div>
+        <div className="signIn">Sign In</div>
         </>
     );
 }

@@ -1,0 +1,29 @@
+.input-block{
+    font-family: "Inter", sans-serif;
+    width: 300px;
+    background-color: rgb(231, 230, 230);
+    padding: 20px;
+}
+.input-block__inputs{
+    color: grey;    
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+.input-block__title{
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+.input-block__input{
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    outline: none;
+}
+.input-block__input:focus{
+    border: 1px solid gray;
+}
+.input-block__input:active{
+    border: none;
+}
