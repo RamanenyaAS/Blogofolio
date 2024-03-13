@@ -4,9 +4,16 @@
     background-color: #2231AA;
     height: 84px;
 }
-.header-burger, .header-search{
+.header-burger, .header-user, .header-close{
     padding: 30px;
     width: 24px;
+}
+.header-burger{
+    border: 1px solid #5360CD;
+}
+/* если задать стили поиску то он почему то становится мелким */
+.header-search{
+    
 }
 .header-block{
     display: flex;

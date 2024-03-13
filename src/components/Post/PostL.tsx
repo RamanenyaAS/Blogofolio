@@ -4,7 +4,7 @@ import IconDislike from '../../image/IconDislike.svg';
 import IconPostL from '../../image/IconPostL.svg';
 import IconMore from '../../image/IconMore.svg';
 import IconFavorites from '../../image/IconFavorites.svg';
-
+import {posts} from '../../data'
 
 
 

@@ -1,10 +1,30 @@
-.button-primary {
+.button-primary, .button-secondary, .button-secondary2{
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
     padding: 20px;
-    background-color: lightblue;
+    border-radius: 2px;
+    border: none;
+}
+.button-primary {
+    color: white;
+    background-color: #2231AA;
+}
+.button-primary:hover{
+    background-color: #5360CD;
+}
+.button-primary:disabled, .button-secondary:disabled{
+    background-color: #E8E8E8;
+    color: #8D8E97;
+}
+.button-secondary{
+    border: none; /* почему то только с important */
+    padding: 20px;
+    background-color: #E8E8E8;
     border: 1px solid black;
 }
-.button-secondary {
-    padding: 20px;
-    background-color: rgb(0, 191, 255);
-    border: 1px solid black;
+.button-secondary:hover{
+    background-color: #DADADA;
+}
+.button-secondary2{
+    
 }
