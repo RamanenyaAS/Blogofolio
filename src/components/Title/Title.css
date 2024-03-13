@@ -1,16 +1,6 @@
-.container {
-    width: 200px;
-    padding: 20px;
-    background-color: rgb(78, 78, 236);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container__initial{
-    padding: 7px;
-    background-color: lightblue;
-}
-.container__name{
-    color: white;
-    padding-left: 10px;
+.signIn{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    cursor: pointer;
 }

@@ -1,0 +1,17 @@
+.post-container{
+    display: flex;
+    font-family: "Inter", sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+.postL-left__date{
+    color: #8D8E97;
+}
+.postL-left__title{
+    color: #313037;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+}
+.postL-left__text{
+    color: #8D8E97;
+}

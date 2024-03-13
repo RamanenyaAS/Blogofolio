@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2231AA;
+    height: 84px;
+}
+.header-burger, .header-search{
+    padding: 30px;
+    width: 24px;
+}
+.header-block{
+    display: flex;
+}

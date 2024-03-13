@@ -1,29 +1,33 @@
 import './App.css';
-import Authorization from './components/Authorization/Authorization';
+// import Title from './components/Title/Title';
 import Button from './components/Button/Button';
-import Input from './components/Input/Input';
-import Tabs from './components/Tabs/Tabs';
-import Textarea from './components/Textarea/Textarea';
-import Title from './components/Title/Title';
+// import Input from './components/Input/Input';
+// import Subtitle from './components/Subtitle/Subtitle';
+// import Tabs from './components/Tabs/Tabs';
+// import Template from './components/Template/Template';
+// import Textarea from './components/Textarea/Textarea';
+// import User from './components/User/User';
+// import PostL from './components/Post/PostL';
+import Header from './components/Header/Header';
+// import Footer from './components/Footer/Footer';
 
 function App() {
   
-  function buttonClickOne(): void{
-    alert("A");
-  }
-  function buttonClickTwo(): void{
-    alert("B");
-  }
-  
   return (
     <>
-      <Button typeButton="button-primary" clickFunction={buttonClickOne} isDisabled={true} text="Click me"></Button>
-      <Button typeButton="button-secondary" clickFunction={buttonClickTwo} isDisabled={false} text="Submit"></Button>
-      <Title username="Vitya Pupkin"></Title>
-      <Authorization></Authorization>
-      <Tabs></Tabs>
-      <Input></Input>
-      <Textarea></Textarea>
+      <Header></Header>
+      {/* <Button typeButton="button-primary"  isDisabled={false} text="Click me"></Button> */}
+      {/* <Button typeButton="button-secondary" clickFunction={buttonClickTwo} isDisabled={false} text="Submit"></Button> */}
+      {/* <User username="Vitya Pupkin"></User> */}
+      {/* <Title text="Sign In"></Title> */}
+      {/* <Tabs></Tabs> */}
+      {/* <Input></Input> */}
+      {/* <Textarea></Textarea> */}
+      {/* <Subtitle className="subtitle-grey" text="Back to home"></Subtitle> */}
+      {/* <Title text="Title"></Title> */}
+      {/* <Template text = "Template body"></Template> */}
+      {/* <PostL date="13.02" title="Qasd" description="qwe"></PostL> */}
+      {/* <Footer></Footer> */}
     </>
   );
 }

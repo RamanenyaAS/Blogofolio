@@ -1,0 +1,25 @@
+.user-block {
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-block__initial{
+    text-align: center;
+    width: 28px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 34px;
+    color: white;
+    padding: 7px 10px;
+    background-color: #5360CD;
+    border-radius: 2px;
+}
+.user-block__name{
+    font-family: "Inter", sans-serif;
+    line-height: 34px;
+    font-weight: 600;
+    color: white;
+    padding-left: 16px;
+}

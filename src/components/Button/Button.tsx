@@ -2,12 +2,12 @@ import { IButton } from '../../types/interfaces';
 import './Button.css';
 
 
-function Button({text, isDisabled, clickFunction, typeButton}: IButton) {
+function Button({text, isDisabled, typeButton}: IButton) {
     
 
     return ( 
         <>
-        <button onClick={clickFunction} disabled={isDisabled} className={typeButton}>{text}</button>
+        <button  disabled={isDisabled} className={typeButton}>{text}</button>
         </>
      );
 }

@@ -1,0 +1,9 @@
+.template{
+    width: 620px;
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    color: #254050;
+    padding: 40px;
+    border: 1px solid #DADADA;
+    text-align: center;
+}
