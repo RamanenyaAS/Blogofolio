@@ -1,0 +1,18 @@
+.signUp-form{
+    font-family: "Inter", sans-serif;
+    max-width: 500px;
+    background-color: #F3F3F3;
+    padding: 20px;
+    border: 1px solid #DADADA;
+    margin: 0 auto;
+    margin-top: 72px;
+}
+.subtitle-block{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0px;
+}
+.subtitle-block__link{
+    padding: 2px 5px;
+    text-decoration: none;
+}

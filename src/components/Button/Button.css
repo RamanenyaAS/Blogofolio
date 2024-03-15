@@ -1,9 +1,12 @@
 .button-primary, .button-secondary, .button-secondary2{
+    width: 100%;
     font-size: 18px;
     font-family: "Inter", sans-serif;
     padding: 20px;
     border-radius: 2px;
     border: none;
+    cursor: pointer;
+    margin-top: 48px;
 }
 .button-primary {
     color: white;

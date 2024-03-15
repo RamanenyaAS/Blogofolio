@@ -1,9 +1,9 @@
 import './Title.css'
 
-function Title({text} : {text:string}) {
+function Title({text, className} : {text:string, className: string}) {
     return ( 
         <>
-        <div className="signIn">{text}</div>
+        <div className={className}>{text}</div>
         </>
     );
 }

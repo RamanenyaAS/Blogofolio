@@ -1,9 +1,9 @@
 import './Template.css'
 
-function Template({text} : {text: string}) {
+function Template({text, className} : {text: string, className : string}) {
     return ( 
         <>
-        <div className="template">{text}</div>
+        <div className={className}>{text}</div>
         </>
     );
 }

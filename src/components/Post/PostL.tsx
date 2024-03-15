@@ -9,6 +9,8 @@ import {posts} from '../../data'
 
 
 function PostL({date, title, description} : {date: string, title: string, description: string}) {
+    
+    // const [{id, image, text, date, lesson_num, title, description, author}] = posts
     return ( 
         <div className="post-container">
             <div className="postL-left">

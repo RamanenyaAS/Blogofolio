@@ -2,7 +2,7 @@ import './Input.css'
 import { useState } from "react";
 
 
-function Input() {
+function Input({title, type, placeholder, autocomplete} : {title: string, type: string, placeholder: string, autocomplete?: string}) {
 
     const [hasError, setHasError] = useState(false);
 
@@ -15,11 +15,10 @@ function Input() {
     }
 
     return ( 
-        <div className="input-block">
-            <div className="input-block__inputs">INPUTS</div>
-            <div className="input-block__title">Title</div>
-            <input className="input-block__input" type="text" placeholder="Placeholder" onChange={(e) => handleChange(e)}  style={{border: hasError ? "1px solid red" : "none"}}/>
-        </div>
+        <>
+            <div className="input__title">{title}</div>
+            <input className="input" type={type} placeholder={placeholder} autoComplete={autocomplete} onChange={(e) => handleChange(e)}  style={{border: hasError ? "1px solid red" : "none"}}/>
+        </>
      );
 }
 

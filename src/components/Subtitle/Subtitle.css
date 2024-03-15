@@ -1,10 +1,7 @@
 .subtitle{
+    cursor: pointer;
     font-family: "Inter", sans-serif;
     color: #313037;
     size: 16px;
     line-height: 24px;
-}
-.subtitle_black{
-    color: black;
-    font-weight: 600;
 }

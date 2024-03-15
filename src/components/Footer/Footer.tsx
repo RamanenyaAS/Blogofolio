@@ -1,5 +1,5 @@
 import './Footer.css'
-import '../Common.css'
+import '../../Common.css'
 
 function Footer() {
     return ( 

@@ -5,6 +5,7 @@
     height: 84px;
 }
 .header-burger, .header-user, .header-close{
+    cursor: pointer;
     padding: 30px;
     width: 24px;
 }
@@ -13,7 +14,7 @@
 }
 /* если задать стили поиску то он почему то становится мелким */
 .header-search{
-    
+    cursor: pointer;
 }
 .header-block{
     display: flex;
