@@ -10,9 +10,9 @@
 .subtitle-block{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 24px 0px;
 }
 .subtitle-block__link{
-    padding: 2px 5px;
     text-decoration: none;
 }

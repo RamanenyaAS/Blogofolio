@@ -13,6 +13,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Confirm from './components/Confirm/Confirm';
 import SignUp from './components/SignUpForm/SignUpForm';
+import SingIn from './components/SignInForm/SingInForm';
 
 function App() {
   
@@ -31,8 +32,9 @@ function App() {
       {/* <Success></Success> */}
       {/* <Confirm></Confirm> */}
       {/* <Template text = "Template body"></Template> */}
-      {/* <PostL date="13.02" title="Qasd" description="qwe"></PostL> */}
-      <SignUp></SignUp>
+      <PostL></PostL>
+      {/* <SignUp></SignUp> */}
+      {/* <SingIn></SingIn> */}
       {/* <Footer></Footer> */}
     </>
   );

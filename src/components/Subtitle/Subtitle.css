@@ -1,7 +1,16 @@
 .subtitle{
+    padding: 15px 0px;
     cursor: pointer;
     font-family: "Inter", sans-serif;
     color: #313037;
+    size: 16px;
+    line-height: 24px;
+}
+.subtitle_grey{
+    padding: 15px 0px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    color: #646464;
     size: 16px;
     line-height: 24px;
 }

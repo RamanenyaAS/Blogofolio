@@ -23,7 +23,7 @@ function SignUp() {
                     <Input title="Confirm password" type="password" placeholder="Confirm password"></Input>
                     <Button typeButton="button-primary"  isDisabled={false} text="Sign Up"></Button>
                     <div className="subtitle-block">
-                        <Subtitle className="subtitle" text="Already have an account?"></Subtitle>
+                        <Subtitle className="subtitle_grey" text="Already have an account?  "></Subtitle>
                         <a className="subtitle-block__link" href="">Sign In</a>
                     </div>
                 </form>
