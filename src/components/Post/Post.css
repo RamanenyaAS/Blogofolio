@@ -1,7 +1,25 @@
+.post-container{
+    max-width: 740px;
+    max-height: 450px;
+    border-bottom: 1px solid #DADADA;
+}
+.postS-container{
+    max-width: 350px;
+    max-height: 200px;
+    border-bottom: 1px solid #DADADA;
+}
+.postM-container{
+    max-width: 350px;
+    max-height: 450px;
+    border-bottom: 1px solid #DADADA;
+}
 .post-block{
     display: flex;
+    justify-content: space-between;
     font-family: "Inter", sans-serif;
-    border-bottom: 1px solid #DADADA;
+}
+.postL-left{
+    padding-right: 30px;
 }
 .postL-left__date{
     color: #8D8E97;
@@ -10,8 +28,24 @@
     color: #313037;
     font-size: 32px;
     font-weight: 700;
+    padding-top: 8px;
     line-height: 44px;
 }
 .postL-left__text{
+    padding: 25px 0px;
     color: #8D8E97;
+    text-overflow: ellipsis;
+}
+.post-icon{
+    padding: 5px 12px;
+}
+.postS-image{
+    max-width: 96px;
+}
+
+.postS-left__title, .postM-left__title{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 0px;
+    line-height: 28px;
 }

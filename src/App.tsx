@@ -14,6 +14,10 @@ import Footer from './components/Footer/Footer';
 import Confirm from './components/Confirm/Confirm';
 import SignUp from './components/SignUpForm/SignUpForm';
 import SingIn from './components/SignInForm/SingInForm';
+import PostS from './components/Post/PostS';
+import PostM from './components/Post/PostM';
+import AllPosts from './components/Post/AllPosts';
+import SelectedPost from './components/SelectedPost/SelectedPost';
 
 function App() {
   
@@ -32,7 +36,11 @@ function App() {
       {/* <Success></Success> */}
       {/* <Confirm></Confirm> */}
       {/* <Template text = "Template body"></Template> */}
-      <PostL></PostL>
+      {/* <PostL></PostL> */}
+      {/* <PostS></PostS> */}
+      {/* <PostM></PostM> */}
+      {/* <AllPosts></AllPosts> */}
+      {/* <SelectedPost></SelectedPost> */}
       {/* <SignUp></SignUp> */}
       {/* <SingIn></SingIn> */}
       {/* <Footer></Footer> */}
