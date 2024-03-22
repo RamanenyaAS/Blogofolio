@@ -110,14 +110,4 @@ export const posts: IPost[] =[
         description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
         author: 11
     },
-    {
-        id: 12,
-        image: "https://loremflickr.com/320/240/animals?=12",
-        text: "Some text 12",
-        date: "2024-01-29",
-        lesson_num: 12,
-        title: "Notting Hill Carnival",
-        description: "One of the world's largest street music festivals has taken place in London.",
-        author: 12
-    }
 ]

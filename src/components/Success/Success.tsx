@@ -11,7 +11,6 @@ import Footer from '../Footer/Footer';
 function Success() {
     return ( 
         <>
-        <Header></Header>
             <div className="container">
                 <Subtitle className="subtitle" text="Back to home"></Subtitle>
                 <Title className="signIn" text="Success"></Title>
@@ -20,7 +19,6 @@ function Success() {
                     <Button typeButton="button-primary"  isDisabled={false} text="Go to home"></Button>
                 </div>    
             </div>
-        <Footer></Footer>
         </>
      );
 }

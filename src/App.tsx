@@ -18,32 +18,25 @@ import PostS from './components/Post/PostS';
 import PostM from './components/Post/PostM';
 import AllPosts from './components/Post/AllPosts';
 import SelectedPost from './components/SelectedPost/SelectedPost';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
-  
+
   return (
     <>
-      {/* <Header></Header> */}
-      {/* <Button typeButton="button-secondary"  isDisabled={false} text="Click me"></Button> */}
-      {/* <Button typeButton="button-secondary" clickFunction={buttonClickTwo} isDisabled={false} text="Submit"></Button> */}
-      {/* <User username="Vitya Pupkin"></User> */}
-      {/* <Title text="Sign In"></Title> */}
-      {/* <Tabs></Tabs> */}
-      {/* <Input title="text" placeholder="place"></Input> */}
-      {/* <Textarea></Textarea> */}
-      {/* <Subtitle className="subtitle-grey" text="Back to home"></Subtitle> */}
-      {/* <Title text="Title"></Title> */}
-      {/* <Success></Success> */}
-      {/* <Confirm></Confirm> */}
-      {/* <Template text = "Template body"></Template> */}
-      {/* <PostL></PostL> */}
-      {/* <PostS></PostS> */}
-      {/* <PostM></PostM> */}
-      {/* <AllPosts></AllPosts> */}
-      {/* <SelectedPost></SelectedPost> */}
-      {/* <SignUp></SignUp> */}
-      {/* <SingIn></SingIn> */}
-      {/* <Footer></Footer> */}
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element={<AllPosts></AllPosts>}></Route>
+          <Route path='/signIn' element={<SingIn></SingIn>}></Route>
+          <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+          <Route path='/confirm' element={<Confirm></Confirm>}></Route>
+          <Route path='/success' element={<Success></Success>}></Route>
+          <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
     </>
   );
 }

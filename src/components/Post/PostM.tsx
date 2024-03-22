@@ -3,15 +3,16 @@ import IconLike from '../../image/IconLike.svg';
 import IconDislike from '../../image/IconDislike.svg';
 import IconMore from '../../image/IconMore.svg';
 import IconFavorites from '../../image/IconFavorites.svg';
-import {posts} from '../../data'
+import { IPost } from '../../types/interfaces';
+// import {posts} from '../../data'
 
-function PostM() {
+function PostM({post} : {post: IPost}) {
     return ( 
         <>
         <div className="postM-container">
-            <img className="post-image" src={posts[1].image} alt="Cosmo" />   
-            <div className="post-left__date">{posts[1].date}</div>
-            <div className="postM-left__title">{posts[1].title}</div>
+            <img className="post-image" src={post.image} alt="Cosmo" />   
+            <div className="post-left__date">{post.date}</div>
+            <div className="postM-left__title">{post.title}</div>
             <div className="post-block">
                 <div className="bottom-left">
                     <img className="post-icon" src={IconLike} alt="Like" />

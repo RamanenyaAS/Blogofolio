@@ -5,6 +5,7 @@ import IconBurger from '../../image/IconBurger.svg'
 import IconUser from '../../image/IconUser.svg'
 import IconClose from '../../image/IconClose.svg'
 
+// выпадающая часть через useState
 
 function Header() {
     return ( 

@@ -1,6 +1,10 @@
 .container{
     font-family: "Inter", sans-serif;
     max-width: 1120px;
+    min-height: 70vh;
     margin: 0 auto;
     padding-top: 50px;
+}
+.link{
+    text-decoration: none;
 }

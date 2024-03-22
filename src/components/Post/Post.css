@@ -4,11 +4,16 @@
     border-bottom: 1px solid #DADADA;
 }
 .postS-container{
+    padding: 30px 0px;
     max-width: 350px;
     max-height: 200px;
     border-bottom: 1px solid #DADADA;
 }
+.postS-container:first-child{
+    padding: 0px;
+}
 .postM-container{
+    padding: 30px 0px;
     max-width: 350px;
     max-height: 450px;
     border-bottom: 1px solid #DADADA;

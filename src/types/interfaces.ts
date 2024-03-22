@@ -30,3 +30,12 @@ export interface IPost {
     description: string,
     author: number
 }
+
+export interface IInput {
+    title: string,
+    type: string,
+    placeholder: string,
+    autocomplete?: string,
+    onChange?: (event: any) => void,
+    maxLength: number
+}

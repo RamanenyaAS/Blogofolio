@@ -8,3 +8,9 @@
     color: #8D8E97;
     border-top: #DADADA;
 }
+.footer-container{
+    font-family: "Inter", sans-serif;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-top: 50px;
+}

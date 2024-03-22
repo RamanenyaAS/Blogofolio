@@ -10,7 +10,6 @@ import Footer from '../Footer/Footer';
 function Confirm() {
     return ( 
         <>
-        <Header></Header>
             <div className="container">
                 <Subtitle className="subtitle" text="Back to home"></Subtitle>
                 <Title className="signIn" text="Registration Confirmation"></Title>
@@ -19,7 +18,6 @@ function Confirm() {
                     <Button typeButton="button-primary"  isDisabled={false} text="Go to home"></Button>
                 </div>    
             </div>
-        <Footer></Footer>
         </>
     );
 }

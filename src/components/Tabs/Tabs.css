@@ -4,7 +4,7 @@
     font-size: 16px;
     font-weight: 600;
     border-bottom: 1px solid #DADADA;
-    padding-top: 40px;
+    margin: 40px 0px;
 }
 .tabs-container__all{
     border-bottom: 1px solid black;
@@ -15,4 +15,7 @@
 .tabs-container__all:hover, .tabs-container__favorites:hover, .tabs-container__popular:hover{
     color: #2231AA;
     cursor: pointer;
+}
+.tabs-container__all, .tabs-container__favorites, .tabs-container__popular{
+    padding: 30px 60px;
 }
