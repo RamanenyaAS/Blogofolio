@@ -1,12 +1,12 @@
 import '../../Common.css';
 import './AllPosts.css'
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
-import Tabs from '../Tabs/Tabs';
-import Title from '../Title/Title';
-import PostL from './PostL';
-import PostM from './PostM';
-import PostS from './PostS';
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
+import Tabs from '../../components/Tabs/Tabs';
+import Title from '../../components/Title/Title';
+import PostL from '../../components/Post/PostL';
+import PostM from '../../components/Post/PostM';
+import PostS from '../../components/Post/PostS';
 import IconPrev from '../../image/IconPrev.svg';
 import IconNext from '../../image/IconNext.svg';
 import { useEffect, useState } from 'react';

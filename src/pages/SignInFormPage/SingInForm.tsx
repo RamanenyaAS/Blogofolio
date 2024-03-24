@@ -1,12 +1,12 @@
 import '../../Common.css'
-import '../Subtitle/Subtitle.css'
-import '../SignUpForm/SignUpForm.css'
-import Subtitle from '../Subtitle/Subtitle';
-import Title from '../Title/Title';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import '../../components/Subtitle/Subtitle.css'
+import '../../pages/SignUpFormPage/SignUpForm.css'
+import Subtitle from '../../components/Subtitle/Subtitle';
+import Title from '../../components/Title/Title';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import Input from '../../components/Input/Input';
+import Button from '../../components/Button/Button';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -51,7 +51,7 @@ function SingIn() {
                 <form className="signUp-form">
                     <Input title="Email" type="email" placeholder="Your email" onChange={handleEmailChange} maxLength={MAX_EMAIL_LENGTH}></Input>
                     <Input title="Password" type="password" placeholder="Your password" onChange={handlePasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
-                    <Subtitle className="subtitle" text="Forgot password?"></Subtitle>
+                    <Link to="/reset" className="subtitle_grey link" >Forgot password?</Link>
                     <Button typeButton="button-primary"  isDisabled={false} text="Sign In"></Button>
                     <div className="subtitle-block">
                         <Subtitle className="subtitle_grey" text="Don’t have an account?  "></Subtitle>

@@ -1,25 +1,17 @@
 import './App.css';
-import Success from './components/Success/Success';
-// import Title from './components/Title/Title';
-// import Button from './components/Button/Button';
-import Input from './components/Input/Input';
-// import Subtitle from './components/Subtitle/Subtitle';
-// import Tabs from './components/Tabs/Tabs';
-import Template from './components/Template/Template';
-// import Textarea from './components/Textarea/Textarea';
-// import User from './components/User/User';
-import PostL from './components/Post/PostL';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Success from './pages/SuccessPage/Success';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Confirm from './components/Confirm/Confirm';
-import SignUp from './components/SignUpForm/SignUpForm';
-import SingIn from './components/SignInForm/SingInForm';
-import PostS from './components/Post/PostS';
-import PostM from './components/Post/PostM';
-import AllPosts from './components/Post/AllPosts';
-import SelectedPost from './components/SelectedPost/SelectedPost';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Confirm from './pages/ConfirmPage';
+import SignUp from './pages/SignUpFormPage/SignUpForm';
+import SingIn from './pages/SignInFormPage/SingInForm';
+import AllPosts from './pages/AllPostPage/AllPosts';
+import SelectedPost from './pages/SelectedPostPage/SelectedPost';
 import ErrorPage from './pages/ErrorPage';
+import ResetPage from './pages/ResetPage';
+import NewPasswordPage from './pages/NewPasswordPage';
+import AddPage from './pages/AddPage';
 
 function App() {
 
@@ -34,6 +26,9 @@ function App() {
           <Route path='/confirm' element={<Confirm></Confirm>}></Route>
           <Route path='/success' element={<Success></Success>}></Route>
           <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
+          <Route path='/reset' element={<ResetPage></ResetPage>} ></Route>
+          <Route path='/reset-new' element={<NewPasswordPage></NewPasswordPage>}></Route>
+          <Route path='/add' element={<AddPage></AddPage>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

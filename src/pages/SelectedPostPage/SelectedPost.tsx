@@ -6,17 +6,16 @@ import IconFavorites from '../../image/IconFavorites.svg';
 import IconPostL from '../../image/IconPostL.svg';
 import IconPrev from '../../image/IconPrev.svg';
 import IconNext from '../../image/IconNext.svg';
-import Header from "../Header/Header";
-import Subtitle from "../Subtitle/Subtitle";
-import Title from "../Title/Title";
+import Header from "../../components/Header/Header";
+import Subtitle from "../../components/Subtitle/Subtitle";
+import Title from "../../components/Title/Title";
 import {posts} from '../../data'
-import Footer from '../Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 
 
 function SelectedPost() {
     return ( 
         <>
-        <Header></Header>
         <div className="container">
                 <div className="subtitle-block">
                     <Subtitle className="subtitle" text="Home |"></Subtitle>
@@ -58,7 +57,6 @@ function SelectedPost() {
                     </div>
                </div>
         </div>
-        <Footer></Footer>    
         </>
     );
 }

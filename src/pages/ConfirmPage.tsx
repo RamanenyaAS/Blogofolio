@@ -1,11 +1,11 @@
-import '../../Common.css'
-import '../Subtitle/Subtitle.css'
-import Subtitle from '../Subtitle/Subtitle';
-import Title from '../Title/Title';
-import Template from '../Template/Template';
-import Header from '../Header/Header';
-import Button from '../Button/Button';
-import Footer from '../Footer/Footer';
+import '../Common.css'
+import '../components/Subtitle/Subtitle.css'
+import Subtitle from '../components/Subtitle/Subtitle';
+import Title from '../components/Title/Title';
+import Template from '../components/Template/Template';
+import Header from '../components/Header/Header';
+import Button from '../components/Button/Button';
+import Footer from '../components/Footer/Footer';
 
 function Confirm() {
     return ( 

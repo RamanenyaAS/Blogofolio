@@ -1,19 +1,19 @@
 import '../../Common.css'
-import '../Subtitle/Subtitle.css'
+import '../../components/Subtitle/Subtitle.css'
 import './SignUpForm.css'
-import Subtitle from '../Subtitle/Subtitle';
-import Title from '../Title/Title';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import Subtitle from '../../components/Subtitle/Subtitle';
+import Title from '../../components/Title/Title';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import Input from '../../components/Input/Input';
+import Button from '../../components/Button/Button';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function SignUp() {
     
 
-    const [emailError, setEmailError] = useState(""); 
+   const [emailError, setEmailError] = useState(""); 
    const [passwordError, setPasswordError] = useState(""); 
    const [userNameError, setUserNameError] = useState(""); 
 
