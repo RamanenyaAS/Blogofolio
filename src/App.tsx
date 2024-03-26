@@ -12,6 +12,8 @@ import ErrorPage from './pages/ErrorPage';
 import ResetPage from './pages/ResetPage';
 import NewPasswordPage from './pages/NewPasswordPage';
 import AddPage from './pages/AddPage';
+import FileInput from './components/FileInput/FileInput';
+import SearchPage from './pages/SearchPage';
 
 function App() {
 
@@ -29,9 +31,11 @@ function App() {
           <Route path='/reset' element={<ResetPage></ResetPage>} ></Route>
           <Route path='/reset-new' element={<NewPasswordPage></NewPasswordPage>}></Route>
           <Route path='/add' element={<AddPage></AddPage>}></Route>
+          <Route path='/search' element={<SearchPage></SearchPage>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
+      {/* <FileInput></FileInput> */}
     </>
   );
 }

@@ -23,7 +23,6 @@
     border: none; /* почему то только с important */
     padding: 20px;
     background-color: #E8E8E8;
-    border: 1px solid black;
 }
 .button-secondary:hover{
     background-color: #DADADA;

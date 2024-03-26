@@ -15,7 +15,9 @@ import { IPost } from '../../types/interfaces';
 function AllPosts() {
 
     const [data, setData] = useState<null | IPost[]>(null)
+    const [theme, setTheme] = useState('light');
     
+
     useEffect(() => {
         async function getData() {
             const responce = await fetch(`https://63fc7786677c4158730c5bf7.mockapi.io/Pinterest`);
@@ -24,7 +26,12 @@ function AllPosts() {
         }
         getData();
     }, [])
-console.log(data);
+
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+    };
+
+
     return ( 
         <>
             <div className="container">
@@ -34,7 +41,7 @@ console.log(data);
                     <div className="post-left">
                         <PostL></PostL>
                         <div className="left-block">
-                        {data && data.map(post => <PostM key={post.id} post={post} />)}
+                        {data && data.slice(1,5).map(post => <PostM key={post.id} post={post} />)}
                             {/* <PostM></PostM>
                             <PostM></PostM>
                             <PostM></PostM>
@@ -42,12 +49,13 @@ console.log(data);
                         </div>
                     </div>
                     <div className="post-right">
+                    {data && data.slice(5,11).map(post => <PostS key={post.id} post={post} />)}
+                        {/* <PostS></PostS>
                         <PostS></PostS>
                         <PostS></PostS>
                         <PostS></PostS>
                         <PostS></PostS>
-                        <PostS></PostS>
-                        <PostS></PostS>
+                        <PostS></PostS> */}
                     </div>
                 </div>
                 <div className="all-post-navigation">

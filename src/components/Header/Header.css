@@ -19,3 +19,32 @@
 .header-block{
     display: flex;
 }
+.dropdown-block{
+    right: 123px;
+    position: relative;
+    top: 70px;
+}
+.header__navigation{
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__navigation:nth-child(2){
+    color: #2231AA;
+}
+.header__navigation{
+    border-bottom: 1px solid #E8E8E8;
+    color: black;
+}
+.theme-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 84px;
+}
+.theme-block__image{
+    width: 24px;
+}
