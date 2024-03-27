@@ -9,9 +9,11 @@
 }
 .subtitle-block{
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 24px 0px;
+}
+.subtitle-block_center{
+    justify-content: center;
 }
 .subtitle-block__link{
     text-decoration: none;

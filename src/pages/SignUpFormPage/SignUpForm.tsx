@@ -83,7 +83,7 @@ const handlePasswordChange = (ev: any) => {
                     <Input title="Password" type="password" placeholder="Your password" onChange={handlePasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
                     <Input title="Confirm password" type="password" placeholder="Confirm password" onChange={handleConfirmPasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
                     <Button typeButton="button-primary"  isDisabled={false} text="Sign Up"></Button>
-                    <div className="subtitle-block">
+                    <div className="subtitle-block subtitle-block_center">
                         <Subtitle className="subtitle_grey" text="Already have an account?  "></Subtitle>
                         <Link to= "/signIn" className="subtitle-block__link">Sign In</Link>
                     </div>

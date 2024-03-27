@@ -16,13 +16,28 @@
 .header-search{
     cursor: pointer;
 }
+.header-search__input{
+    border: none;
+    background: #5360CD;
+    width: 100%;
+    outline: none;
+}
+.header-search__input::placeholder{
+    color: black;
+    font-weight: 700;
+}
 .header-block{
     display: flex;
 }
 .dropdown-block{
-    right: 123px;
+    right: 125px;
     position: relative;
     top: 70px;
+}
+.dropdown-block-list{
+    background: #F3F3F3;
+    border: 1px solid #E8E8E8;
+    color: black;
 }
 .header__navigation{
     font-weight: 600;

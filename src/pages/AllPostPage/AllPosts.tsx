@@ -42,20 +42,10 @@ function AllPosts() {
                         <PostL></PostL>
                         <div className="left-block">
                         {data && data.slice(1,5).map(post => <PostM key={post.id} post={post} />)}
-                            {/* <PostM></PostM>
-                            <PostM></PostM>
-                            <PostM></PostM>
-                            <PostM></PostM> */}
                         </div>
                     </div>
                     <div className="post-right">
                     {data && data.slice(5,11).map(post => <PostS key={post.id} post={post} />)}
-                        {/* <PostS></PostS>
-                        <PostS></PostS>
-                        <PostS></PostS>
-                        <PostS></PostS>
-                        <PostS></PostS>
-                        <PostS></PostS> */}
                     </div>
                 </div>
                 <div className="all-post-navigation">

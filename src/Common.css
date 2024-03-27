@@ -5,10 +5,23 @@
     margin: 0 auto;
     padding-top: 50px;
 }
+/* .main{
+    box-sizing: border-box;
+    padding: 0 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.background-light{
+    /* background-color: ; */
+}
+.background-dark{
+    background-color: #313037;
+}
 .link{
     text-decoration: none;
 }
-
 .active{
     font-weight: 700;
 }

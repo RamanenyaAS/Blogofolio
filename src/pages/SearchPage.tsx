@@ -34,7 +34,6 @@ function SearchPage() {
     const currentPosts = posts.slice(startIndex, endIndex)
 
     const pagesArray = Array.from(Array(totalPages).keys()).map(page => page + 1);
-    const pagesString = pagesArray.join(' ');
 
 
     return ( 

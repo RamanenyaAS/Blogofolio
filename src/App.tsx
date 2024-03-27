@@ -14,6 +14,7 @@ import NewPasswordPage from './pages/NewPasswordPage';
 import AddPage from './pages/AddPage';
 import FileInput from './components/FileInput/FileInput';
 import SearchPage from './pages/SearchPage';
+import { useState } from 'react';
 
 function App() {
 
@@ -21,19 +22,22 @@ function App() {
     <>
       <BrowserRouter>
         <Header></Header>
-        <Routes>
-          <Route path='/' element={<AllPosts></AllPosts>}></Route>
-          <Route path='/signIn' element={<SingIn></SingIn>}></Route>
-          <Route path='/signUp' element={<SignUp></SignUp>}></Route>
-          <Route path='/confirm' element={<Confirm></Confirm>}></Route>
-          <Route path='/success' element={<Success></Success>}></Route>
-          <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
-          <Route path='/reset' element={<ResetPage></ResetPage>} ></Route>
-          <Route path='/reset-new' element={<NewPasswordPage></NewPasswordPage>}></Route>
-          <Route path='/add' element={<AddPage></AddPage>}></Route>
-          <Route path='/search' element={<SearchPage></SearchPage>}></Route>
-        </Routes>
-        <Footer></Footer>
+        <div className="background">
+          <Routes>
+            <Route path='/' element={<AllPosts></AllPosts>}></Route>
+            <Route path='/signIn' element={<SingIn></SingIn>}></Route>
+            <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+            <Route path='/confirm' element={<Confirm></Confirm>}></Route>
+            <Route path='/success' element={<Success></Success>}></Route>
+            <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
+            <Route path='/reset' element={<ResetPage></ResetPage>} ></Route>
+            <Route path='/reset-new' element={<NewPasswordPage></NewPasswordPage>}></Route>
+            <Route path='/add' element={<AddPage></AddPage>}></Route>
+            <Route path='/search' element={<SearchPage></SearchPage>}></Route>
+            <Route path='/selected' element={<SelectedPost></SelectedPost>}></Route>
+          </Routes>
+          <Footer></Footer>
+        </div>
       </BrowserRouter>
       {/* <FileInput></FileInput> */}
     </>
