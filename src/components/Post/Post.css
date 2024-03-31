@@ -9,10 +9,14 @@
     border-bottom: 1px solid #DADADA;
 }
 .postS-container:first-child{
-    padding: 0px;
+    padding-top: 0px;
+    margin-bottom: 15px;
+}
+.postS-container:nth-child(5){
+    margin: 34px 0px;
 }
 .postM-container{
-    padding: 30px 0px;
+    margin: 30px 10px;
     max-width: 350px;
     max-height: 450px;
     border-bottom: 1px solid #DADADA;
@@ -25,7 +29,7 @@
 .postL-left{
     padding-right: 30px;
 }
-.postL-left__date{
+.postL-left__date, .post-left__date, .postS-left__date{
     color: #8D8E97;
 }
 .postL-left__title{
@@ -46,7 +50,6 @@
 .postS-image{
     max-width: 96px;
 }
-
 .postS-left__title, .postM-left__title{
     font-size: 18px;
     font-weight: 600;

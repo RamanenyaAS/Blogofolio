@@ -14,15 +14,23 @@ import NewPasswordPage from './pages/NewPasswordPage';
 import AddPage from './pages/AddPage';
 import FileInput from './components/FileInput/FileInput';
 import SearchPage from './pages/SearchPage';
-import { useState } from 'react';
+import {ThemeContext} from './providers/myContext';
+import { useContext, useState } from 'react';
 
 function App() {
+
+  const [topic, setTopic] = useState('light');
+
+  const toggleTopic = () => {
+    setTopic(topic === 'light' ? 'dark' : 'light');
+  };
 
   return (
     <>
       <BrowserRouter>
+      <ThemeContext.Provider value={[ topic, toggleTopic ]}>
         <Header></Header>
-        <div className="background">
+        <div className={`background-${topic}`}>
           <Routes>
             <Route path='/' element={<AllPosts></AllPosts>}></Route>
             <Route path='/signIn' element={<SingIn></SingIn>}></Route>
@@ -38,8 +46,8 @@ function App() {
           </Routes>
           <Footer></Footer>
         </div>
+        </ThemeContext.Provider>
       </BrowserRouter>
-      {/* <FileInput></FileInput> */}
     </>
   );
 }

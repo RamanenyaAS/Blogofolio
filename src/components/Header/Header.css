@@ -34,10 +34,13 @@
     position: relative;
     top: 70px;
 }
-.dropdown-block-list{
+.dropdown-block-list, .dropdown-block-list_dark{
     background: #F3F3F3;
     border: 1px solid #E8E8E8;
     color: black;
+}
+.dropdown-block-list_dark{
+    background-color: #313037;
 }
 .header__navigation{
     font-weight: 600;

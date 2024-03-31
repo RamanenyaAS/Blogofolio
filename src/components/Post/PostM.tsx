@@ -10,7 +10,7 @@ function PostM({post} : {post: IPost}) {
     return ( 
         <>
         <div className="postM-container">
-            <img className="post-image" src={post.image} alt="Cosmo" />   
+            <img className="postM-image" src={post.image} alt="Cosmo" />   
             <div className="post-left__date">{post.date}</div>
             <div className="postM-left__title">{post.title}</div>
             <div className="post-block">

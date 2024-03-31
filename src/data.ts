@@ -3,7 +3,7 @@ import {IPost} from '../src/types/interfaces'
 export const posts: IPost[] =[
     {
         id: 1,
-        image: "https://loremflickr.com/320/240/animals?=1",
+        image: "https://loremflickr.com/320/240/space?=1",
         text: "Astronauts Kayla Barron and Raja Chari floated out of the International Space Station airlock for a spacewalk Tuesday, installing brackets and struts to support new solar arrays to upgrade the research lab’s power system on the same day that crewmate Mark Vande Hei marked his 341st day in orbit, a U.S. record for a single spaceflight.     During the final days of Alice Neel’s blockbuster solo show at the Metropolitan Museum of Art this summer, the line into the exhibition spanned the length of the museum’s European paintings corridor, and the wait was over half an hour. Titled “People Come First,” the show featured more than 100 gritty cityscapes, domestic interiors, and stripped-down portraits of Neel’s neighbors, friends, and fellow artists in the largest-ever showing of her work in her hometown of New York City. The stories tracked Hambling’s trailblazing career while focusing on her current and upcoming projects. The artist’s installation Relic (2021), produced alongside sound recordist Chris Watson, was recently on view at Snape Maltings in London. Meanwhile, this October, portraits by Hambling will be presented at the Italian gallery Thomas Brambilla. The artist’s “Wave Series” is also currently being exhibited in the group show “Summer Exhibition” at Marlborough London, which runs through September 10th.",
         date: "2024-01-18",
         lesson_num: 1,
@@ -13,7 +13,7 @@ export const posts: IPost[] =[
     },
     {
         id: 2,
-        image: "https://loremflickr.com/320/240/animals?=2",
+        image: "https://loremflickr.com/320/240/space?=2",
         text: "Some text 2",
         date: "2024-01-19",
         lesson_num: 2,
@@ -23,7 +23,7 @@ export const posts: IPost[] =[
     },
     {
         id: 3,
-        image: "https://loremflickr.com/320/240/animals?=3",
+        image: "https://loremflickr.com/320/240/space?=3",
         text: "Some text 3",
         date: "2024-01-20",
         lesson_num: 3,
@@ -33,7 +33,7 @@ export const posts: IPost[] =[
     },
     {
         id: 4,
-        image: "https://loremflickr.com/320/240/animals?=4",
+        image: "https://loremflickr.com/320/240/space?=4",
         text: "Some text 4",
         date: "2024-01-21",
         lesson_num: 4,
@@ -43,7 +43,7 @@ export const posts: IPost[] =[
     },
     {
         id: 5,
-        image: "https://loremflickr.com/320/240/animals?=5",
+        image: "https://loremflickr.com/320/240/space?=5",
         text: "Some text 5",
         date: "2024-01-22",
         lesson_num: 5,
@@ -52,7 +52,7 @@ export const posts: IPost[] =[
     },
     {
         id: 6,
-        image: "https://loremflickr.com/320/240/animals?=6",
+        image: "https://loremflickr.com/320/240/space?=6",
         text: "Some text 6",
         date: "2024-01-23",
         lesson_num: 6,
@@ -62,7 +62,7 @@ export const posts: IPost[] =[
     },
     {
         id: 7,
-        image: "https://loremflickr.com/320/240/animals?=7",
+        image: "https://loremflickr.com/320/240/space?=7",
         text: "Some text 7",
         date: "2024-01-24",
         lesson_num: 7,
@@ -72,7 +72,7 @@ export const posts: IPost[] =[
     },
     {
         id: 8,
-        image: "https://loremflickr.com/320/240/animals?=8",
+        image: "https://loremflickr.com/320/240/space?=8",
         text: "Some text 8",
         date: "2024-01-25",
         lesson_num: 8,
@@ -82,7 +82,7 @@ export const posts: IPost[] =[
     },
     {
         id: 9,
-        image: "https://loremflickr.com/320/240/animals?=9",
+        image: "https://loremflickr.com/320/240/space?=9",
         text: "Some text 9",
         date: "2024-01-26",
         lesson_num: 9,
@@ -92,7 +92,7 @@ export const posts: IPost[] =[
     },
     {
         id: 10,
-        image: "https://loremflickr.com/320/240/animals?=10",
+        image: "https://loremflickr.com/320/240/space?=10",
         text: "Some text 10",
         date: "2024-01-27",
         lesson_num: 10,
@@ -102,7 +102,7 @@ export const posts: IPost[] =[
     },
     {
         id: 11,
-        image: "https://loremflickr.com/320/240/animals?=11",
+        image: "https://loremflickr.com/320/240/space?=11",
         text: "Some text 11",
         date: "2024-01-28",
         lesson_num: 11,
