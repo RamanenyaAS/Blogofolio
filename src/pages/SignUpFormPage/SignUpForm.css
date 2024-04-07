@@ -1,4 +1,4 @@
-.signUp-form{
+.signUp-form, .signUp-form_dark{
     font-family: "Inter", sans-serif;
     max-width: 500px;
     background-color: #F3F3F3;
@@ -6,6 +6,10 @@
     border: 1px solid #DADADA;
     margin: 0 auto;
     margin-top: 72px;
+}
+.signUp-form_dark{
+    border: 1px solid #8D8E97;
+    background-color: #313037;
 }
 .subtitle-block{
     display: flex;
@@ -15,6 +19,9 @@
 .subtitle-block_center{
     justify-content: center;
 }
-.subtitle-block__link{
+.subtitle-block__link, .subtitle-block__link_dark{
     text-decoration: none;
+}
+.subtitle-block__link_dark{
+    color: rgb(67, 67, 238);
 }

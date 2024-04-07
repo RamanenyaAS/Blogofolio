@@ -7,11 +7,13 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../providers/myContext';
 
 function SignUp() {
     
+   const [topic] = useContext(ThemeContext);
 
    const [emailError, setEmailError] = useState(""); 
    const [passwordError, setPasswordError] = useState(""); 
@@ -74,18 +76,18 @@ const handlePasswordChange = (ev: any) => {
     return ( 
         <>
         <div className="container">
-            <Subtitle className="subtitle" text="Back to home"></Subtitle>
-            <Title className="signIn" text="Sign Up"></Title>
+            <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="Sign Up"></Title>
             <div className="signUp-container">
-                <form className="signUp-form">
+                <form className={topic === 'light' ? 'signUp-form' : 'signUp-form_dark'}>
                     <Input title="Name" type="name" placeholder="Your name" autocomplete= "name" onChange={handleUserNameChange} maxLength={MAX_NAME_LENGTH}></Input>
                     <Input title="Email" type="email" placeholder="Your email" onChange={handleEmailChange} maxLength={MAX_EMAIL_LENGTH}></Input>
                     <Input title="Password" type="password" placeholder="Your password" onChange={handlePasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
                     <Input title="Confirm password" type="password" placeholder="Confirm password" onChange={handleConfirmPasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
                     <Button typeButton="button-primary"  isDisabled={false} text="Sign Up"></Button>
                     <div className="subtitle-block subtitle-block_center">
-                        <Subtitle className="subtitle_grey" text="Already have an account?  "></Subtitle>
-                        <Link to= "/signIn" className="subtitle-block__link">Sign In</Link>
+                        <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text="Already have an account?  "></Subtitle>
+                        <Link to= "/signIn" className={topic === 'light' ? 'subtitle-block__link' : 'subtitle-block__link_dark'}>Sign In</Link>
                     </div>
                 </form>
             </div>

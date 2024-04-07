@@ -65,4 +65,5 @@
 }
 .theme-block__image{
     width: 24px;
+    cursor: pointer;
 }

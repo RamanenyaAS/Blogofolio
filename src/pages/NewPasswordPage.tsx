@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "../components/Button/Button";
 import Input from "../components/Input/Input";
 import Subtitle from "../components/Subtitle/Subtitle";
 import Title from "../components/Title/Title";
+import { ThemeContext } from "../providers/myContext";
+
 
 function NewPasswordPage() {
     
+    const [topic] = useContext(ThemeContext);
+
+
     const [passwordError, setPasswordError] = useState(""); 
  
     const [password, setPassword] = useState(""); 
@@ -39,9 +44,9 @@ function NewPasswordPage() {
     return ( 
         <>
         <div className="container">
-            <Subtitle className="subtitle" text="Back to home"></Subtitle>
-            <Title className="signIn" text="New password"></Title>
-                <form className="signUp-form">
+            <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="New password"></Title>
+                <form className={topic === 'light' ? 'signUp-form' : 'signUp-form_dark'}>
                     <Input title="Password" type="password" placeholder="Your password" onChange={handlePasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
                     <Input title="Confirm password" type="password" placeholder="Confirm password" onChange={handleConfirmPasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
                     <Button typeButton="button-primary"  isDisabled={false} text="Set password"></Button>

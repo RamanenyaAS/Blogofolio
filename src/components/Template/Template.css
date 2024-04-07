@@ -1,10 +1,12 @@
-.template{
+.template, .template_dark{
     /* width: 620px; */
     font-size: 25px;
     font-family: "Inter", sans-serif;
     color: #254050;
     padding-bottom: 48px;
-    
+}
+.template_dark{
+    color: white;
 }
 .template-container{
     padding: 40px;

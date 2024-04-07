@@ -1,14 +1,19 @@
 import Title from "../components/Title/Title";
 import IconPrev from '../image/IconPrev.svg';
 import IconNext from '../image/IconNext.svg';
+import IconPrevDark from '../image/IconPrevDark.svg';
+import IconNextDark from '../image/IconNextDark.svg';
 import PostS from "../components/Post/PostS";
 import {posts} from "../data"
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../providers/myContext";
 
 
 function SearchPage() {
 
-    
+    const [topic] = useContext(ThemeContext);
+
+
     const postsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = Math.ceil(posts.length / postsPerPage);
@@ -39,7 +44,7 @@ function SearchPage() {
     return ( 
         <>
             <div className="container">
-                <Title className="signIn" text={`Search results `}></Title>
+                <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text={`Search results `}></Title>
                 <div className="search-block">
                     {currentPosts.map(post => (
                         <PostS key={post.id} post={post} />
@@ -47,11 +52,12 @@ function SearchPage() {
                 </div>
                 <div className="all-post-navigation">
                     <div className="navigation-block">
-                        <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev" />
+                        {/* <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev" /> */}
+                        {topic === "light" ? <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev"/> : <img src={IconPrevDark} alt="Icon Prev"/>}
                         <div className="navigation-block__caption" onClick={goToPrevPage}>Prev</div>
                     </div>
                     <div className="navigation-block">
-                        <div className="navigation-block__caption">
+                        <div className={topic === "light" ? "navigation-block__caption" : "navigation-block__caption_dark"}>
                             {pagesArray.map(page => (
                                 <span
                                     key={page}
@@ -65,7 +71,8 @@ function SearchPage() {
                     </div>
                     <div className="navigation-block">
                         <div className="navigation-block__caption" onClick={goToNextPage} >Next</div>
-                        <img src={IconNext} onClick={goToNextPage} alt="Icon Next" />
+                        {/* <img src={IconNext} onClick={goToNextPage} alt="Icon Next" /> */}
+                        {topic === "light" ? <img src={IconNext}  onClick={goToNextPage} alt="Icon Next"/> : <img src={IconNextDark}  onClick={goToNextPage} alt="Icon Next"/>}
                     </div>
                 </div>
             </div>    

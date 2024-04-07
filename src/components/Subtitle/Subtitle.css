@@ -1,4 +1,4 @@
-.subtitle{
+.subtitle, .subtitle_dark{
     padding: 15px 0px;
     cursor: pointer;
     font-family: "Inter", sans-serif;
@@ -6,11 +6,14 @@
     size: 16px;
     line-height: 24px;
 }
-.subtitle_grey{
+.subtitle_gray{
     padding: 15px 0px;
     cursor: pointer;
     font-family: "Inter", sans-serif;
     color: #646464;
     size: 16px;
     line-height: 24px;
+}
+.subtitle_dark{
+    color: white;
 }

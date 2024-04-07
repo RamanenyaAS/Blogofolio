@@ -2,7 +2,7 @@
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 56px;
-    cursor: pointer;
+    cursor: default;
     padding-top: 32px;
 }
 .signIn_dark{

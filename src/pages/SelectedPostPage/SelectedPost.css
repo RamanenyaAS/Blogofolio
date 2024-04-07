@@ -8,10 +8,13 @@
     display: flex;
     gap: 10px;
 }
-.text{
+.text, .text_dark{
     color: #313037;
     font-size: 18px;
     line-height: 32px;
+}
+.text_dark{
+    color: white;
 }
 .button-block{
     display: flex;
@@ -49,8 +52,11 @@
 .navigation-right{
     text-align: end;
 }
-.navigation-text{
+.navigation-text, .navigation-text_dark{
     font-weight: 500;
     line-height: 24px;
     color: #313037;
+}
+.navigation-text_dark{
+    color: white;
 }

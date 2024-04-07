@@ -1,0 +1,17 @@
+.add-page-block{
+    display: flex;
+    justify-content: space-between;
+}
+.add-block{
+    max-width: 544px;
+    display: flex;
+    flex-direction: column;
+}
+.add-navigation{
+    display: flex;
+    justify-content: space-between;
+}
+.add-navigation-right{
+    display: flex;
+    gap: 20px;
+}

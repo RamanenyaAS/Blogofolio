@@ -7,10 +7,13 @@ import PostM from '../../components/Post/PostM';
 import PostS from '../../components/Post/PostS';
 import IconPrev from '../../image/IconPrev.svg';
 import IconNext from '../../image/IconNext.svg';
+import IconPrevDark from '../../image/IconPrevDark.svg';
+import IconNextDark from '../../image/IconNextDark.svg';
 import { useContext, useEffect, useState } from 'react';
 import { IPost } from '../../types/interfaces';
 import {posts} from '../../data'
 import { ThemeContext } from '../../providers/myContext';
+import { Link } from 'react-router-dom';
 
 
 function AllPosts() {
@@ -27,6 +30,36 @@ function AllPosts() {
     //     }
     //     getData();
     // }, [])
+
+    const postsPerPage = 11;
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = Math.ceil(posts.length / postsPerPage);
+
+    const goToPrevPage = () => {
+        if(currentPage>1){
+            setCurrentPage(prevPage => prevPage - 1);
+        }
+    };
+
+    const goToNextPage = () => {
+        if(currentPage < totalPages){
+            setCurrentPage(prevPage => prevPage + 1);
+        }
+    };
+
+    const goToPage = (page: number) => {
+        setCurrentPage(page);
+    };
+
+    const startIndex = (currentPage - 1) * postsPerPage;
+    const endIndex = startIndex + postsPerPage;
+    const currentPosts = posts.slice(startIndex, endIndex)
+
+    const pagesArray = Array.from(Array(totalPages).keys()).map(page => page + 1);
+
+
+    
+
 
 
     return ( 
@@ -47,18 +80,33 @@ function AllPosts() {
                 </div>
                 <div className="all-post-navigation">
                     <div className="navigation-block">
-                        <img src={IconPrev} alt="Icon Prev" />
-                        <div className="navigation-block__caption">Prev</div>
+                        {topic === "light" ? <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev"/> : <img src={IconPrevDark} onClick={goToPrevPage} alt="Icon Prev"/>}
+                        <div onClick={goToPrevPage} className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>Prev</div>
                     </div>
                     <div className="navigation-block">
-                        <div className="navigation-block__caption">1 2 3 4 5</div>
+                        <div className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>{pagesArray.map(page => (
+                                <span
+                                    key={page}
+                                    className={currentPage === page ? 'active' : ''}
+                                    onClick={() => goToPage(page)}
+                                >
+                                    {page}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                     <div className="navigation-block">
-                        <div className="navigation-block__caption">Next</div>
-                        <img src={IconNext} alt="Icon Next" />
+                        <div onClick={goToNextPage} className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>Next</div>
+                        {topic === "light" ? <img src={IconNext} onClick={goToNextPage} alt="Icon Next"/> : <img src={IconNextDark} onClick={goToNextPage} alt="Icon Next"/>}
                     </div>
                 </div>
             </div>
+            {posts.map(post => (
+                <div key={post.id}>
+                {/* Отображение данных поста */}
+                <Link to={`/post/${post.id}`}>Подробнее</Link>
+            </div>
+        ))}
         </>
     );
 }

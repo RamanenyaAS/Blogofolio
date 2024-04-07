@@ -7,15 +7,22 @@ import Template from '../../components/Template/Template';
 import Header from '../../components/Header/Header';
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
+import { ThemeContext } from '../../providers/myContext';
+import { useContext } from 'react';
+
 
 function Success() {
+
+    const [topic] = useContext(ThemeContext);
+
+
     return ( 
         <>
             <div className="container">
-                <Subtitle className="subtitle" text="Back to home"></Subtitle>
-                <Title className="signIn" text="Success"></Title>
+                <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+                <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="Success"></Title>
                 <div className="template-container">
-                    <Template className="template" text={`Email confirmed.\nYour registration is now completed`} />
+                    <Template className={topic === 'light' ? 'template' : 'template_dark'} text={`Email confirmed.\nYour registration is now completed`} />
                     <Button typeButton="button-primary"  isDisabled={false} text="Go to home"></Button>
                 </div>    
             </div>

@@ -1,10 +1,15 @@
+import { useContext } from 'react';
 import Subtitle from '../Subtitle/Subtitle';
 import './Textarea.css'
+import { ThemeContext } from '../../providers/myContext';
 
 function Textarea({children } : {children : string}) {
+    
+    const [topic] = useContext(ThemeContext);
+   
     return ( 
         <>
-            <div className="textarea__title">{children }</div>
+            <div className={topic === "light" ? "textarea__title" : "textarea__title_dark"}>{children }</div>
             <textarea className="textarea" cols={30} rows={10} placeholder="Add your text"></textarea>
         </>
      );

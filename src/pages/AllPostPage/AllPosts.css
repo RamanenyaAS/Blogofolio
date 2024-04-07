@@ -21,8 +21,11 @@
     gap: 20px;
     cursor: pointer;
 }
-.navigation-block__caption{
+.navigation-block__caption, .navigation-block__caption_dark{
     font-weight: 500;
     line-height: 24px;
     color: #313037;
+}
+.navigation-block__caption_dark{
+    color: white;
 }
