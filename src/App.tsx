@@ -41,7 +41,7 @@ function App() {
             <Route path='/reset-new' element={<NewPasswordPage></NewPasswordPage>}></Route>
             <Route path='/add' element={<AddPage></AddPage>}></Route>
             <Route path='/search' element={<SearchPage></SearchPage>}></Route>
-            <Route path='/selected' element={<SelectedPost></SelectedPost>}></Route>
+            <Route path='/post/:postId' element={<SelectedPost></SelectedPost>}></Route>
           </Routes>
           <Footer></Footer>
         </div>

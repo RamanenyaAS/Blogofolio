@@ -38,11 +38,11 @@ function SelectedPost() {
         <div className="container">
                 <div className="subtitle-block">
                     <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Home |"></Subtitle>
-                    <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={" Post" + {postId}}></Subtitle>
+                    <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={` Post ${selectedPost.id}`}></Subtitle>
                 </div>
                <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text={selectedPost.title}></Title> 
-               <img className="post-image" src={IconPostL} alt="" />
-               <div className={topic === 'light' ? 'text' : 'text_dark'}>{posts[0].text}</div>
+               <img className="post-image" src={selectedPost.image} alt="" />
+               <div className={topic === 'light' ? 'text' : 'text_dark'}>{selectedPost.text}</div>
                <div className="button-block">
                     <div className="block-left">
                         <button className="button-like">

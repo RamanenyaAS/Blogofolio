@@ -69,13 +69,25 @@ function AllPosts() {
                 <Tabs></Tabs>
                 <div className="all-post-container">
                     <div className="post-left">
-                        <PostL></PostL>
+                        {posts.slice(startIndex , endIndex - 10).map(post => (
+                            <Link className='link' key={post.id} to={`/post/${post.id}`}>
+                                <PostL post={post} />
+                            </Link>
+                        ))}
                         <div className="left-block">
-                        {posts && posts.slice(1,5).map(post => <PostM key={post.id} post={post} />)}
+                            {posts.slice(startIndex + 1, endIndex - 6).map(post => (
+                                <Link className='link' key={post.id} to={`/post/${post.id}`}>
+                                    <PostM key={post.id} post={post} />
+                                </Link>
+                            ))}
                         </div>
                     </div>
                     <div className="post-right">
-                    {posts && posts.slice(5,11).map(post => <PostS key={post.id} post={post} />)}
+                        {posts.slice(startIndex + 5, endIndex).map(post => (
+                            <Link className='link' key={post.id} to={`/post/${post.id}`}>
+                                <PostS key={post.id} post={post} />
+                            </Link>
+                        ))}
                     </div>
                 </div>
                 <div className="all-post-navigation">
@@ -101,12 +113,6 @@ function AllPosts() {
                     </div>
                 </div>
             </div>
-            {posts.map(post => (
-                <div key={post.id}>
-                {/* Отображение данных поста */}
-                <Link to={`/post/${post.id}`}>Подробнее</Link>
-            </div>
-        ))}
         </>
     );
 }

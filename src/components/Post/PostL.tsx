@@ -11,9 +11,10 @@ import IconFavoritesDark from '../../image/IconFavoritesDark.svg';
 import {posts} from '../../data'
 import { ThemeContext } from '../../providers/myContext';
 import { useContext } from 'react';
+import { IPost } from '../../types/interfaces';
 
 
-function PostL() {
+function PostL({post} : {post : IPost}) {
     
     const [{id, image, text, date, lesson_num, title, description, author}] = posts;
     const [topic] = useContext(ThemeContext);
@@ -25,12 +26,12 @@ function PostL() {
         <div className="post-container">
             <div className="post-block">
                 <div className="postL-left">
-                    <div className="postL-left__date">{posts[0].date}</div>
-                    <div className={topic === 'light' ? 'postL-left__title' : 'postL-left__title_dark'}>{posts[0].title}</div>
-                    <div className="postL-left__text">{posts[0].text.slice(0,400)}</div>     
+                    <div className="postL-left__date">{post.date}</div>
+                    <div className={topic === 'light' ? 'postL-left__title' : 'postL-left__title_dark'}>{post.title}</div>
+                    <div className="postL-left__text">{post.text.slice(0,150)}</div>     
                 </div>
                 <div className="postL-right">
-                   <img src={IconPostL} alt="Cosmo" />   
+                   <img src={post.image} alt="Cosmo" />   
                 </div>
             </div>
             <div className="post-block">

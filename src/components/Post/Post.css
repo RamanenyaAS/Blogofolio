@@ -28,6 +28,7 @@
 }
 .postL-left{
     padding-right: 30px;
+    max-height: 356px;
 }
 .postL-left__date, .post-left__date, .postS-left__date{
     color: #8D8E97;
@@ -46,6 +47,7 @@
     padding: 25px 0px;
     color: #8D8E97;
     text-overflow: ellipsis;
+    min-height: 100px;
 }
 
 .post-icon{
@@ -58,6 +60,7 @@
     font-size: 18px;
     font-weight: 600;
     padding: 8px 0px;
+    color: #313037;
     line-height: 28px;
 }
 .postS-left__title_dark, .postM-left__title_dark{

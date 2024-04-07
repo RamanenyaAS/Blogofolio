@@ -110,4 +110,112 @@ export const posts: IPost[] =[
         description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
         author: 11
     },
+    {
+        id: 12,
+        image: "https://loremflickr.com/320/240/space?=66",
+        text: "Some text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "The secret of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 13,
+        image: "https://loremflickr.com/320/240/space?=87",
+        text: "Some text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: " of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 14,
+        image: "https://loremflickr.com/320/240/space?=88",
+        text: "Some text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 15,
+        image: "https://loremflickr.com/320/240/space?=91",
+        text: "S text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "The secret of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },{
+        id: 16,
+        image: "https://loremflickr.com/320/240/space?=71",
+        text: "Some text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: " of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 17,
+        image: "https://loremflickr.com/320/240/space?=51",
+        text: "Some text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 18,
+        image: "https://loremflickr.com/320/240/space?=41",
+        text: "S text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "The secret of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 19,
+        image: "https://loremflickr.com/320/240/space?=31",
+        text: "Some text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: " of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 20,
+        image: "https://loremflickr.com/320/240/space?=111",
+        text: "Some text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
+    {
+        id: 21,
+        image: "https://loremflickr.com/320/240/space?=133",
+        text: "S text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "The secret of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },{
+        id: 22,
+        image: "https://loremflickr.com/320/240/space?=22",
+        text: "S text 11",
+        date: "2024-01-28",
+        lesson_num: 11,
+        title: "The secret of giraffes' long legs",
+        description: "These giraffes at a zoo near London are helping researchers find out just how their spindly legs work. Experts are using special technology to measure the animals' leg movements. They want to see if being tall is a help or a hindrance to moving around.",
+        author: 11
+    },
 ]
