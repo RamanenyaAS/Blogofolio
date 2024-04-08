@@ -15,7 +15,7 @@ import {posts} from '../../data'
 import Footer from '../../components/Footer/Footer';
 import { ThemeContext } from '../../providers/myContext';
 import { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { IPost } from '../../types/interfaces';
 
 
@@ -33,13 +33,19 @@ function SelectedPost() {
     if (!selectedPost) {
         return <div>Пост не найден</div>;
     }
+
+    const previousPostIndex = selectedPost.id - 1;
+    const previousPost = posts.find(post => post.id === previousPostIndex);
+    const nextPostIndex = selectedPost.id + 1;
+    const nextPost = posts.find(post => post.id === nextPostIndex);
+    
     return ( 
         <>
         <div className="container">
-                <div className="subtitle-block">
+                <Link to="/" className="subtitle-block">
                     <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Home |"></Subtitle>
                     <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={` Post ${selectedPost.id}`}></Subtitle>
-                </div>
+                </Link>
                <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text={selectedPost.title}></Title> 
                <img className="post-image" src={selectedPost.image} alt="" />
                <div className={topic === 'light' ? 'text' : 'text_dark'}>{selectedPost.text}</div>
@@ -60,20 +66,24 @@ function SelectedPost() {
                     </div>
                </div>
                <div className="navigation-container">
-                    <div className="navigation-left">
-                        {topic === "light" ? <img src={IconPrev} alt="Icon Prev"/> : <img src={IconPrevDark} alt="Icon Prev"/>}
-                        <div className="navigation-block">
-                            <div className={topic === 'light' ? 'navigation-text' : 'navigation-text_dark'}>Prev</div>
-                            <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text="10 Things to Know About Salvador Dalí"></Subtitle>
-                        </div>
-                    </div>
-                    <div className="navigation-right">
+               {selectedPost.id > 1 && (
+                        <Link className="navigation-left" to={`/post/${selectedPost.id - 1}`}>
+                            {topic === "light" ? <img src={IconPrev} alt="Icon Prev" /> : <img src={IconPrevDark} alt="Icon Prev" />}
+                            <div className="navigation-block">
+                                <div className={topic === 'light' ? 'navigation-text' : 'navigation-text_dark'}>Prev</div>
+                                <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={previousPost?.title || ""} />
+                            </div>
+                        </Link>
+                )}
+                {selectedPost.id < posts.length && (
+                    <Link className="navigation-right" to={`/post/${selectedPost.id - 1}`}>
                         <div className="navigation-block">
                             <div className={topic === 'light' ? 'navigation-text' : 'navigation-text_dark'}>Next</div>
-                            <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text="8 Beautiful Villas Belonging to Artists You Need to See"></Subtitle>
+                            <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={nextPost?.title || ""}></Subtitle>
                         </div>
                         {topic === "light" ? <img src={IconNext} alt="Icon Next"/> : <img src={IconNextDark} alt="Icon Next"/>}
-                    </div>
+                    </Link>
+                )}
                </div>
         </div>
         </>

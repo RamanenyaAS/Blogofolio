@@ -7,6 +7,7 @@ import Title from "../../components/Title/Title";
 import '../SelectedPostPage/SelectedPost.css'
 import { ThemeContext } from "../../providers/myContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 
 function AddPage() {
@@ -19,10 +20,10 @@ function AddPage() {
     return ( 
         <>
         <div className="container">
-                <div className="subtitle-block">
+                <Link to="/" className="subtitle-block">
                     <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Home |"></Subtitle>
                     <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={" Post" + "123"}></Subtitle>
-                </div>
+                </Link>
                <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="Add post"></Title> 
                <form className="add-form">
                     <Input title="Title" type="name" placeholder="Astronauts prep for new solar arrays on nearly spacewalk" maxLength={30}></Input>

@@ -49,7 +49,9 @@ function SingIn() {
    return ( 
       <>
       <div className="container">
-         <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+         <Link to="/" className="link">
+            <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+         </Link>
          <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="Sign In"></Title>
          <div className="signUp-container">
             <form className={topic === 'light' ? 'signUp-form' : 'signUp-form_dark'}>

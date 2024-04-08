@@ -48,6 +48,7 @@
 .navigation-left, .navigation-right{
     display: flex;
     gap: 10px;
+    text-decoration: none;
 }
 .navigation-right{
     text-align: end;
@@ -59,4 +60,13 @@
 }
 .navigation-text_dark{
     color: white;
+}
+.navigation-block{
+    flex-direction: column;
+}
+.navigation-block:first-child{
+    align-items: flex-end;
+}
+.navigation-block:nth-child(2){
+    align-items: flex-start;
 }

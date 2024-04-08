@@ -21,6 +21,9 @@
 }
 .link{
     text-decoration: none;
+    /* возможно что то сломает */
+    /* display: block;
+    width: 200px; */
 }
 .active{
     font-weight: 700;

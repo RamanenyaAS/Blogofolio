@@ -31,12 +31,16 @@ function ResetPage() {
     return ( 
         <>
             <div className="container">
-            <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            <Link to="/" className="subtitle-block">
+                <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            </Link>
             <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="Reset password"></Title>
                 <form className={topic === 'light' ? 'signUp-form' : 'signUp-form_dark'}>
                     <div style={topic === 'light' ? {color: "black"} : {color: "white"}} className="reset-info">You will receive an email <b>example@gmail.com</b> with a link to reset your password!</div>
                     <Input title="Email" type="email" placeholder="example@gmail.com" onChange={handleEmailChange} maxLength={MAX_EMAIL_LENGTH}></Input>
-                    <Button typeButton="button-primary"  isDisabled={false} text="Go to home"></Button>
+                    <Link to="/" >
+                        <Button typeButton="button-primary"  isDisabled={false} text="Go to home"></Button>
+                    </Link>
                 </form>
         </div>
         </>

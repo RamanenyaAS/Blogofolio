@@ -29,54 +29,56 @@ function SignUp() {
    const MAX_NAME_LENGTH = 20; 
 
 
-const handleEmailChange = (ev: any) => { 
-   if (ev.target.value.length > MAX_EMAIL_LENGTH) { 
-      setEmailError( 
-      `Email length should be less the ${MAX_EMAIL_LENGTH} characters.`
-      ); 
-   } else { 
-      setEmailError(""); 
-      setEmail(ev.target.value); 
-   } 
-}; 
+   const handleEmailChange = (ev: any) => { 
+      if (ev.target.value.length > MAX_EMAIL_LENGTH) { 
+         setEmailError( 
+         `Email length should be less the ${MAX_EMAIL_LENGTH} characters.`
+         ); 
+      } else { 
+         setEmailError(""); 
+         setEmail(ev.target.value); 
+      } 
+   }; 
 
-const handleUserNameChange = (ev: any) => { 
-   if (ev.target.value.length > MAX_NAME_LENGTH) { 
-      setUserNameError( 
-      `Name length should be less the ${MAX_NAME_LENGTH} characters.` 
-      ); 
-   } else { 
-      setUserNameError(""); 
-      setUserName(ev.target.value); 
-   } 
-}; 
+   const handleUserNameChange = (ev: any) => { 
+      if (ev.target.value.length > MAX_NAME_LENGTH) { 
+         setUserNameError( 
+         `Name length should be less the ${MAX_NAME_LENGTH} characters.` 
+         ); 
+      } else { 
+         setUserNameError(""); 
+         setUserName(ev.target.value); 
+      } 
+   }; 
 
-const handlePasswordChange = (ev: any) => { 
-    if (ev.target.value.length > MAX_PASSWORD_LENGTH) { 
-       setPasswordError( 
-       `Password length should be less the ${MAX_PASSWORD_LENGTH} characters.` 
-       ); 
-    } else { 
-       setPasswordError(""); 
-       setPassword(ev.target.value); 
-    } 
- };
+   const handlePasswordChange = (ev: any) => { 
+      if (ev.target.value.length > MAX_PASSWORD_LENGTH) { 
+         setPasswordError( 
+         `Password length should be less the ${MAX_PASSWORD_LENGTH} characters.` 
+         ); 
+      } else { 
+         setPasswordError(""); 
+         setPassword(ev.target.value); 
+      } 
+   };
 
- const handleConfirmPasswordChange = (ev: any) => {
-    setConfirmPassword(ev.target.value);
-    // Проверяем, совпадает ли пароль с подтверждением
-    if (ev.target.value !== password) {
-        setPasswordError("Passwords do not match.");
-    } else {
-        setPasswordError(""); 
-    }
-};
+   const handleConfirmPasswordChange = (ev: any) => {
+      setConfirmPassword(ev.target.value);
+      // Проверяем, совпадает ли пароль с подтверждением
+      if (ev.target.value !== password) {
+         setPasswordError("Passwords do not match.");
+      } else {
+         setPasswordError(""); 
+      }
+   };
 
     
     return ( 
         <>
         <div className="container">
-            <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            <Link to="/" className="subtitle-block">
+               <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            </Link>
             <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="Sign Up"></Title>
             <div className="signUp-container">
                 <form className={topic === 'light' ? 'signUp-form' : 'signUp-form_dark'}>

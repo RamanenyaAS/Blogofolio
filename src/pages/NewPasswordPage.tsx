@@ -4,6 +4,7 @@ import Input from "../components/Input/Input";
 import Subtitle from "../components/Subtitle/Subtitle";
 import Title from "../components/Title/Title";
 import { ThemeContext } from "../providers/myContext";
+import { Link } from "react-router-dom";
 
 
 function NewPasswordPage() {
@@ -44,7 +45,9 @@ function NewPasswordPage() {
     return ( 
         <>
         <div className="container">
-            <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            <Link to="/" className="subtitle-block">
+                <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Back to home"></Subtitle>
+            </Link>
             <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="New password"></Title>
                 <form className={topic === 'light' ? 'signUp-form' : 'signUp-form_dark'}>
                     <Input title="Password" type="password" placeholder="Your password" onChange={handlePasswordChange} maxLength={MAX_PASSWORD_LENGTH}></Input>
