@@ -31,7 +31,7 @@ function SelectedPost() {
     const selectedPost: IPost | undefined = posts.find(post => post.id === Number(postId));
     
     if (!selectedPost) {
-        return <div>Пост не найден</div>;
+        return <Link to="/*" className="link"></Link>;
     }
 
     const previousPostIndex = selectedPost.id - 1;
@@ -69,15 +69,15 @@ function SelectedPost() {
                {selectedPost.id > 1 && (
                         <Link className="navigation-left" to={`/post/${selectedPost.id - 1}`}>
                             {topic === "light" ? <img src={IconPrev} alt="Icon Prev" /> : <img src={IconPrevDark} alt="Icon Prev" />}
-                            <div className="navigation-block">
+                            <div className="selected-navigation-block">
                                 <div className={topic === 'light' ? 'navigation-text' : 'navigation-text_dark'}>Prev</div>
                                 <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={previousPost?.title || ""} />
                             </div>
                         </Link>
                 )}
                 {selectedPost.id < posts.length && (
-                    <Link className="navigation-right" to={`/post/${selectedPost.id - 1}`}>
-                        <div className="navigation-block">
+                    <Link className="navigation-right" to={`/post/${selectedPost.id + 1}`}>
+                        <div className="selected-navigation-block">
                             <div className={topic === 'light' ? 'navigation-text' : 'navigation-text_dark'}>Next</div>
                             <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={nextPost?.title || ""}></Subtitle>
                         </div>

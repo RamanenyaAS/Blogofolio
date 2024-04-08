@@ -61,12 +61,15 @@
 .navigation-text_dark{
     color: white;
 }
-.navigation-block{
+.selected-navigation-block{
     flex-direction: column;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
 }
-.navigation-block:first-child{
+.selected-navigation-block:first-child{
     align-items: flex-end;
 }
-.navigation-block:nth-child(2){
+.selected-navigation-block:nth-child(2){
     align-items: flex-start;
 }
