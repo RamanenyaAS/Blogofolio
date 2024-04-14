@@ -14,13 +14,16 @@ import { IPost } from '../../types/interfaces';
 import {posts} from '../../data'
 import { ThemeContext } from '../../providers/myContext';
 import { Link } from 'react-router-dom';
+import { changeActiveTab } from '../../slice/blogofolioSlice';
+import { useSelector } from 'react-redux';
 
 
 function AllPosts() {
 
     // const [data, setData] = useState<null | IPost[]>(null)
     const [topic] = useContext(ThemeContext);
-
+    
+    const reactions :any = useSelector((state) => state)
 
     // useEffect(() => {
     //     async function getData() {
@@ -67,51 +70,55 @@ function AllPosts() {
             <div className="container">
                 <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text="Blog"></Title>
                 <Tabs></Tabs>
-                <div className="all-post-container">
-                    <div className="post-left">
-                        {posts.slice(startIndex , endIndex - 10).map(post => (
-                            <Link className='link' key={post.id} to={`/post/${post.id}`}>
+                {reactions.selectedTab === "All" ? <>
+                    <div className="all-post-container">
+                        <div className="post-left">
+                            {posts.slice(startIndex , endIndex - 10).map(post => (
                                 <PostL post={post} />
-                            </Link>
-                        ))}
-                        <div className="left-block">
-                            {posts.slice(startIndex + 1, endIndex - 6).map(post => (
-                                <Link className='link' key={post.id} to={`/post/${post.id}`}>
+                            ))}
+                            <div className="left-block">
+                                {posts.slice(startIndex + 1, endIndex - 6).map(post => (
                                     <PostM key={post.id} post={post} />
-                                </Link>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                    <div className="post-right">
-                        {posts.slice(startIndex + 5, endIndex).map(post => (
-                            <Link className='link' key={post.id} to={`/post/${post.id}`}>
+                        <div className="post-right">
+                            {posts.slice(startIndex + 5, endIndex).map(post => (
                                 <PostS key={post.id} post={post} />
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-                <div className="all-post-navigation">
-                    <div className="navigation-block">
-                        {topic === "light" ? <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev"/> : <img src={IconPrevDark} onClick={goToPrevPage} alt="Icon Prev"/>}
-                        <div onClick={goToPrevPage} className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>Prev</div>
-                    </div>
-                    <div className="navigation-block">
-                        <div className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>{pagesArray.map(page => (
-                                <span
-                                    key={page}
-                                    className={currentPage === page ? 'active' : ''}
-                                    onClick={() => goToPage(page)}
-                                >
-                                    {page}
-                                </span>
                             ))}
                         </div>
                     </div>
-                    <div className="navigation-block">
-                        <div onClick={goToNextPage} className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>Next</div>
-                        {topic === "light" ? <img src={IconNext} onClick={goToNextPage} alt="Icon Next"/> : <img src={IconNextDark} onClick={goToNextPage} alt="Icon Next"/>}
+                    <div className="all-post-navigation">
+                        <div className="navigation-block">
+                            {topic === "light" ? <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev"/> : <img src={IconPrevDark} onClick={goToPrevPage} alt="Icon Prev"/>}
+                            <div onClick={goToPrevPage} className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>Prev</div>
+                        </div>
+                        <div className="navigation-block">
+                            <div className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>{pagesArray.map(page => (
+                                    <span
+                                        key={page}
+                                        className={currentPage === page ? 'active' : ''}
+                                        onClick={() => goToPage(page)}
+                                    >
+                                        {page}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="navigation-block">
+                            <div onClick={goToNextPage} className={topic === 'light' ? 'navigation-block__caption' : 'navigation-block__caption_dark'}>Next</div>
+                            {topic === "light" ? <img src={IconNext} onClick={goToNextPage} alt="Icon Next"/> : <img src={IconNextDark} onClick={goToNextPage} alt="Icon Next"/>}
+                        </div>
                     </div>
-                </div>
+                </> : null}
+               {reactions.selectedTab === "Favorites" ?
+               <>
+                    <div className="search-block">
+                            {reactions.favorites.map((post: IPost) => (
+                                <PostS key={post.id} post={post} />
+                            ))}
+                    </div>
+               </> : null}
             </div>
         </>
     );

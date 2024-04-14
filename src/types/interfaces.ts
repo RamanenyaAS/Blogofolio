@@ -39,3 +39,10 @@ export interface IInput {
     onChange?: (event: any) => void,
     maxLength: number
 }
+
+export interface IInitialState{
+    like: number,
+    dislike: number,
+    favorites: [] | IPost[],
+    selectedTab: string
+}

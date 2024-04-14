@@ -52,7 +52,6 @@ function SearchPage() {
                 </div>
                 <div className="all-post-navigation">
                     <div className="navigation-block">
-                        {/* <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev" /> */}
                         {topic === "light" ? <img src={IconPrev} onClick={goToPrevPage} alt="Icon Prev"/> : <img src={IconPrevDark} alt="Icon Prev"/>}
                         <div className="navigation-block__caption" onClick={goToPrevPage}>Prev</div>
                     </div>
@@ -71,7 +70,6 @@ function SearchPage() {
                     </div>
                     <div className="navigation-block">
                         <div className="navigation-block__caption" onClick={goToNextPage} >Next</div>
-                        {/* <img src={IconNext} onClick={goToNextPage} alt="Icon Next" /> */}
                         {topic === "light" ? <img src={IconNext}  onClick={goToNextPage} alt="Icon Next"/> : <img src={IconNextDark}  onClick={goToNextPage} alt="Icon Next"/>}
                     </div>
                 </div>
