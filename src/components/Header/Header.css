@@ -1,69 +1,83 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #2231AA;
-    height: 84px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2231AA;
+  height: 84px;
 }
-.header-burger, .header-user, .header-close{
-    cursor: pointer;
-    padding: 30px;
-    width: 24px;
+
+.header-burger, .header-user, .header-close {
+  cursor: pointer;
+  padding: 30px;
+  width: 24px;
 }
-.header-burger{
-    border: 1px solid #5360CD;
+
+.header-burger {
+  border: 1px solid #5360CD;
 }
+
 /* если задать стили поиску то он почему то становится мелким */
-.header-search{
-    cursor: pointer;
+.header-search {
+  cursor: pointer;
 }
-.header-search__input{
-    border: none;
-    background: #5360CD;
-    width: 100%;
-    outline: none;
+
+.header-search__input {
+  border: none;
+  background: #5360CD;
+  width: 100%;
+  outline: none;
 }
-.header-search__input::placeholder{
-    color: black;
-    font-weight: 700;
+
+.header-search__input::placeholder {
+  color: black;
+  font-weight: 700;
 }
-.header-block{
-    display: flex;
+
+.header-block {
+  display: flex;
 }
-.dropdown-block{
-    right: 125px;
-    position: relative;
-    top: 70px;
+
+.dropdown-block {
+  right: 125px;
+  position: relative;
+  top: 70px;
 }
-.dropdown-block-list, .dropdown-block-list_dark{
-    background: #F3F3F3;
-    border: 1px solid #E8E8E8;
-    color: black;
+
+.dropdown-block-list, .dropdown-block-list_dark {
+  background: #F3F3F3;
+  border: 1px solid #E8E8E8;
+  color: black;
 }
-.dropdown-block-list_dark{
-    background-color: #313037;
+
+.dropdown-block-list_dark {
+  background-color: #313037;
 }
-.header__navigation{
-    font-weight: 600;
-    font-family: "Inter", sans-serif;
-    height: 84px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.header__navigation {
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header__navigation:nth-child(2){
-    color: #2231AA;
+
+.header__navigation:nth-child(2) {
+  color: #2231AA;
 }
-.header__navigation{
-    border-bottom: 1px solid #E8E8E8;
-    color: black;
+
+.header__navigation {
+  border-bottom: 1px solid #E8E8E8;
+  color: black;
 }
-.theme-block{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 84px;
+
+.theme-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 84px;
 }
-.theme-block__image{
-    width: 24px;
-    cursor: pointer;
+
+.theme-block__image {
+  width: 24px;
+  cursor: pointer;
 }

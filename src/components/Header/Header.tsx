@@ -17,17 +17,17 @@ import { ThemeContext } from '../../providers/myContext';
 function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState (false);
+  const [isVisible, setIsVisible] = useState(false);
   const [topic, setTopic] = useContext(ThemeContext);
- 
- 
-  const toggleVisible = () =>{
+
+
+  const toggleVisible = () => {
     setIsVisible(!isVisible);
   }
   const toggleDropdown = () => {
-      setIsOpen(!isOpen);
+    setIsOpen(!isOpen);
   };
-    
+
   const toggleTopic = () => {
     setTopic(topic === "light" ? "dark" : "light");
   }
@@ -43,34 +43,34 @@ function Header() {
 
 
 
-  return ( 
+  return (
     <header className="header">
       <div className="header-block">
         {/* <img className='header-close' src={IconClose} alt="Close" /> */}
-        <img className="header-burger"  onClick={toggleDropdown} src={IconBurger} alt="Burger" />
-      {isOpen && (
-        <div className="dropdown-block">
-          <ul className="dropdown-block-list">
-            <User username="Artem Malkin"></User>
-            <div className="header__navigation">
-              <Link to="/" className="link">Home</Link>
-            </div>
-            <div className="header__navigation">
-              <Link to="/add" className="link">Add post</Link>
-            </div>
-            <div className="theme-block">
-              {topic === "light" ? <img className="theme-block__image" src={IconSunActive} alt="Icon Sun Active"/> : <img className="theme-block__image" src={IconSun} alt="Icon Sun" onClick={lightTopic}/> }
-              {topic === "light" ? <img className="theme-block__image" src={IconMoon} alt="Icon Moon" onClick={darkTopic}/> : <img className="theme-block__image" src={IconMoonActive} alt="Icon Moon Active" /> }
+        <img className="header-burger" onClick={toggleDropdown} src={IconBurger} alt="Burger" />
+        {isOpen && (
+          <div className="dropdown-block">
+            <ul className="dropdown-block-list">
+              <User username="Artem Malkin"></User>
+              <div className="header__navigation">
+                <Link to="/" className="link">Home</Link>
+              </div>
+              <div className="header__navigation">
+                <Link to="/add" className="link">Add post</Link>
+              </div>
+              <div className="theme-block">
+                {topic === "light" ? <img className="theme-block__image" src={IconSunActive} alt="Icon Sun Active" /> : <img className="theme-block__image" src={IconSun} alt="Icon Sun" onClick={lightTopic} />}
+                {topic === "light" ? <img className="theme-block__image" src={IconMoon} alt="Icon Moon" onClick={darkTopic} /> : <img className="theme-block__image" src={IconMoonActive} alt="Icon Moon Active" />}
+              </div>
+              <Button typeButton="button-secondary2" isDisabled={false} text="Log out"></Button>
+            </ul>
           </div>
-          <Button  typeButton="button-secondary2"  isDisabled={false} text="Log out"></Button>
-        </ul>
+        )}
       </div>
+      {isVisible && (
+        <input className="header-search__input" type="text" placeholder="Search..." />
       )}
-      </div>
-      {isVisible &&(
-        <input className="header-search__input" type="text" placeholder="Search..."/>
-      )}
-      <div className="header-block"> 
+      <div className="header-block">
         <img className="header-search" src={IconSearch} alt="Search" onClick={toggleVisible} />
         <User username="Artem Malkin"></User>
         {/* <img className="header-user" src={IconUser} alt="User"></img> */}

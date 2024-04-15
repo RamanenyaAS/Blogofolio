@@ -13,7 +13,7 @@ import ResetPage from './pages/ResetPage';
 import NewPasswordPage from './pages/NewPasswordPage';
 import AddPage from './pages/AddPage/AddPage';
 import SearchPage from './pages/SearchPage';
-import {ThemeContext} from './providers/myContext';
+import { ThemeContext } from './providers/myContext';
 import { useContext, useState } from 'react';
 
 function App() {
@@ -27,24 +27,24 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <ThemeContext.Provider value={[ topic, toggleTopic ]}>
-        <Header></Header>
-        <div className={`background-${topic}`}>
-          <Routes>
-            <Route path='/' element={<AllPosts></AllPosts>}></Route>
-            <Route path='/signIn' element={<SingIn></SingIn>}></Route>
-            <Route path='/signUp' element={<SignUp></SignUp>}></Route>
-            <Route path='/confirm' element={<Confirm></Confirm>}></Route>
-            <Route path='/success' element={<Success></Success>}></Route>
-            <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
-            <Route path='/reset' element={<ResetPage></ResetPage>} ></Route>
-            <Route path='/reset-new' element={<NewPasswordPage></NewPasswordPage>}></Route>
-            <Route path='/add' element={<AddPage></AddPage>}></Route>
-            <Route path='/search' element={<SearchPage></SearchPage>}></Route>
-            <Route path='/post/:postId' element={<SelectedPost></SelectedPost>}></Route>
-          </Routes>
-          <Footer></Footer>
-        </div>
+        <ThemeContext.Provider value={[topic, toggleTopic]}>
+          <Header></Header>
+          <div className={`background-${topic}`}>
+            <Routes>
+              <Route path='/' element={<AllPosts></AllPosts>}></Route>
+              <Route path='/signIn' element={<SingIn></SingIn>}></Route>
+              <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+              <Route path='/confirm' element={<Confirm></Confirm>}></Route>
+              <Route path='/success' element={<Success></Success>}></Route>
+              <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
+              <Route path='/reset' element={<ResetPage></ResetPage>} ></Route>
+              <Route path='/reset-new' element={<NewPasswordPage></NewPasswordPage>}></Route>
+              <Route path='/add' element={<AddPage></AddPage>}></Route>
+              <Route path='/search' element={<SearchPage></SearchPage>}></Route>
+              <Route path='/post/:postId' element={<SelectedPost></SelectedPost>}></Route>
+            </Routes>
+            <Footer></Footer>
+          </div>
         </ThemeContext.Provider>
       </BrowserRouter>
     </>

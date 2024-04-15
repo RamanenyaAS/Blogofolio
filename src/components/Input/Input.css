@@ -1,23 +1,27 @@
-.input__title, .input__title_dark{
-    margin-top: 24px;
-    font-size: 16px;
-    font-weight: 600;
-    padding-bottom: 8px;
-    line-height: 20px;
+.input__title, .input__title_dark {
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  line-height: 20px;
 }
-.input__title_dark{
-    color: white;
+
+.input__title_dark {
+  color: white;
 }
-.input{
-    width: 93%;
-    border: none;
-    border-radius: 2px;
-    padding: 18px;
-    outline: none;
+
+.input {
+  width: 93%;
+  border: none;
+  border-radius: 2px;
+  padding: 18px;
+  outline: none;
 }
-.input:focus{
-    border: 1px solid gray;
+
+.input:focus {
+  border: 1px solid gray;
 }
-.input:active{
-    border: none;
+
+.input:active {
+  border: none;
 }

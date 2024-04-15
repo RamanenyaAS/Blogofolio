@@ -1,10 +1,11 @@
-.container{
-    font-family: "Inter", sans-serif;
-    max-width: 1120px;
-    min-height: 70vh;
-    margin: 0 auto;
-    padding-top: 50px;
+.container {
+  font-family: "Inter", sans-serif;
+  max-width: 1120px;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding-top: 50px;
 }
+
 /* .main{
     box-sizing: border-box;
     padding: 0 10%;
@@ -13,18 +14,21 @@
     flex-direction: column;
     align-items: center;
 } */
-.background-light{
-    background-color: #F3F3F3;
+.background-light {
+  background-color: #F3F3F3;
 }
-.background-dark{
-    background-color: #313037;
+
+.background-dark {
+  background-color: #313037;
 }
-.link{
-    text-decoration: none;
-    /* возможно что то сломает */
-    /* display: block;
+
+.link {
+  text-decoration: none;
+  /* возможно что то сломает */
+  /* display: block;
     width: 200px; */
 }
-.active{
-    font-weight: 700;
+
+.active {
+  font-weight: 700;
 }

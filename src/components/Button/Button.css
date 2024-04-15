@@ -1,32 +1,36 @@
-.button-primary, .button-secondary, .button-secondary2{
-    width: 100%;
-    font-size: 18px;
-    font-family: "Inter", sans-serif;
-    padding: 20px;
-    border-radius: 2px;
-    border: none;
-    cursor: pointer;
-    margin-top: 48px;
+.button-primary, .button-secondary, .button-secondary2 {
+  width: 100%;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  padding: 20px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  margin-top: 48px;
 }
+
 .button-primary {
-    color: white;
-    background-color: #2231AA;
+  color: white;
+  background-color: #2231AA;
 }
-.button-primary:hover{
-    background-color: #5360CD;
+
+.button-primary:hover {
+  background-color: #5360CD;
 }
-.button-primary:disabled, .button-secondary:disabled{
-    background-color: #E8E8E8;
-    color: #8D8E97;
+
+.button-primary:disabled, .button-secondary:disabled {
+  background-color: #E8E8E8;
+  color: #8D8E97;
 }
-.button-secondary{
-    border: none; /* почему то только с important */
-    padding: 20px;
-    background-color: #E8E8E8;
+
+.button-secondary {
+  border: none;
+  padding: 20px;
+  background-color: #E8E8E8;
 }
-.button-secondary:hover{
-    background-color: #DADADA;
+
+.button-secondary:hover {
+  background-color: #DADADA;
 }
-.button-secondary2{
-    
-}
+
+.button-secondary2 {}

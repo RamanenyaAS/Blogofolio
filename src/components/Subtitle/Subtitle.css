@@ -1,22 +1,25 @@
-.subtitle, .subtitle_dark{
-    padding: 15px 0px;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
-    color: #313037;
-    size: 16px;
-    line-height: 24px;
+.subtitle, .subtitle_dark {
+  padding: 15px 0px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  color: #313037;
+  size: 16px;
+  line-height: 24px;
 }
-.subtitle_gray{
-    padding: 15px 0px;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
-    color: #646464;
-    size: 16px;
-    line-height: 24px;
+
+.subtitle_gray {
+  padding: 15px 0px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  color: #646464;
+  size: 16px;
+  line-height: 24px;
 }
-.subtitle_dark{
-    color: white;
+
+.subtitle_dark {
+  color: white;
 }
-.subtitle-block{
-    text-decoration: none;
+
+.subtitle-block {
+  text-decoration: none;
 }

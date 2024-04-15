@@ -1,10 +1,11 @@
-.signIn, .signIn_dark{
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 56px;
-    cursor: default;
-    padding-top: 32px;
+.signIn, .signIn_dark {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  cursor: default;
+  padding-top: 32px;
 }
-.signIn_dark{
-    color: white;
+
+.signIn_dark {
+  color: white;
 }

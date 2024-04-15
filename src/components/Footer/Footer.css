@@ -1,19 +1,22 @@
-.footer-block, .footer-block_dark{
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #DADADA;
-    padding: 34px 0px;
+.footer-block, .footer-block_dark {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #DADADA;
+  padding: 34px 0px;
 }
-.footer-block__caption{
-    color: #8D8E97;
-    border-top: #DADADA;
+
+.footer-block__caption {
+  color: #8D8E97;
+  border-top: #DADADA;
 }
-.footer-container{
-    font-family: "Inter", sans-serif;
-    max-width: 1120px;
-    margin: 0 auto;
-    padding-top: 50px;
+
+.footer-container {
+  font-family: "Inter", sans-serif;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 50px;
 }
-.footer-block_dark{
-    border-top: 1px solid #8D8E97;
+
+.footer-block_dark {
+  border-top: 1px solid #8D8E97;
 }
