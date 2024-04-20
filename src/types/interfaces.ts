@@ -45,4 +45,7 @@ export interface IInitialState {
   dislike: number,
   favorites: [] | IPost[],
   selectedTab: string
+  status: null | string,
+  error: null | string,
+  blogs: [] | IPost[]
 }

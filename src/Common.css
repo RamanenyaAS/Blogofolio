@@ -16,10 +16,12 @@
 } */
 .background-light {
   background-color: #F3F3F3;
+  min-height: 92vh;
 }
 
 .background-dark {
   background-color: #313037;
+  min-height: 92vh;
 }
 
 .link {

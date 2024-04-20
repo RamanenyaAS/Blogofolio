@@ -7,7 +7,7 @@ export const fetchBlog = createAsyncThunk(
   'blogofolio/fetchBlog',
   async function (_, { rejectWithValue }) {
     try {
-      const responce = await fetch("https://studapi.teachmeskills.by/blog/posts/");
+      const responce = await fetch("https://studapi.teachmeskills.by/blog/posts/?limit=50");
       if (!responce.ok) {
         throw new Error("ERROR")
       }
@@ -20,6 +20,27 @@ export const fetchBlog = createAsyncThunk(
   }
 )
 
+export const fetchAuthUser = createAsyncThunk(
+  'blogofolio/fetchAuthUser',
+  async function (obj: any, { rejectWithValue }) {
+    try {
+      const responce = await fetch("https://studapi.teachmeskills.by/auth/users/", {
+        method: "POST",
+        body: JSON.stringify(obj),
+      }
+      );
+      if (!responce.ok) {
+        throw new Error("Регистрация не прошла")
+      }
+      const data = await responce.json();
+      console.log(data);
+      return data;
+    }
+    catch (error) {
+      return rejectWithValue((error as Error).message)
+    }
+  }
+)
 
 
 export const blogofolioSlice = createSlice({
@@ -41,6 +62,12 @@ export const blogofolioSlice = createSlice({
       state.dislike += 1
     },
     addToFavorite: (state: IInitialState, { payload }) => {
+      const isAlreadyAdded = state.favorites.some(item => item.id === payload.id);
+      if (isAlreadyAdded) {
+        alert("Данный пост уже добавлен в Favorites")
+        return;
+      }
+
       state.favorites = [...state.favorites, payload]
       console.log(current(state));
     },

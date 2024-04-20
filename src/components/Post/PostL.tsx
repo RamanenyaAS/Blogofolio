@@ -46,7 +46,7 @@ function PostL({ post }: { post: IPost }) {
               <div className="postL-left__text">{post.text.slice(0, 150)}</div>
             </div>
             <div className="postL-right">
-              <img src={post.image} alt="Cosmo" />
+              <img  className="postL-image" src={post.image} alt="Cosmo" />
             </div>
           </div>
         </Link>
