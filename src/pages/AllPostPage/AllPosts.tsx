@@ -11,10 +11,8 @@ import IconPrevDark from '../../image/IconPrevDark.svg';
 import IconNextDark from '../../image/IconNextDark.svg';
 import { useContext, useEffect, useState } from 'react';
 import { IInitialState, IPost } from '../../types/interfaces';
-// import {posts} from '../../data'
 import { ThemeContext } from '../../providers/myContext';
-import { Link } from 'react-router-dom';
-import { changeActiveTab, fetchBlog } from '../../slice/blogofolioSlice';
+import { fetchBlog } from '../../slice/blogofolioSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 

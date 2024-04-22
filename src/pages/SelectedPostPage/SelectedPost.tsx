@@ -3,20 +3,19 @@ import './SelectedPost.css'
 import IconLike from '../../image/IconLike.svg';
 import IconDislike from '../../image/IconDislike.svg';
 import IconFavorites from '../../image/IconFavorites.svg';
-import IconPostL from '../../image/IconPostL.svg';
 import IconPrev from '../../image/IconPrev.svg';
 import IconNext from '../../image/IconNext.svg';
 import IconPrevDark from '../../image/IconPrevDark.svg';
+import { posts } from '../../data';
 import IconNextDark from '../../image/IconNextDark.svg';
-import Header from "../../components/Header/Header";
 import Subtitle from "../../components/Subtitle/Subtitle";
 import Title from "../../components/Title/Title";
-import { posts } from '../../data'
-import Footer from '../../components/Footer/Footer';
 import { ThemeContext } from '../../providers/myContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { IPost } from '../../types/interfaces';
+import { IInitialState, IPost } from '../../types/interfaces';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchOnePost } from '../../slice/blogofolioSlice';
 
 
 function SelectedPost() {
@@ -25,15 +24,24 @@ function SelectedPost() {
 
   const { postId } = useParams<string>();
 
+  const dispatch = useDispatch()<any>;
+  const selectedPost: IPost | any = useSelector((state: IInitialState) => state.selectedPost);
+  const status: string | null = useSelector((state: IInitialState) => state.status);
+  
+  useEffect(() => {
+    if (typeof postId === "string"){
+      dispatch(fetchOnePost(postId));
+    }
+  },[postId])
 
-
-
-  const selectedPost: IPost | undefined = posts.find(post => post.id === Number(postId));
+  // const selectedPost: IPost | undefined = posts.find(post => post.id === Number(postId));
 
   if (!selectedPost) {
     return <Link to="/*" className="link"></Link>;
   }
 
+
+  // починить
   const previousPostIndex = selectedPost.id - 1;
   const previousPost = posts.find(post => post.id === previousPostIndex);
   const nextPostIndex = selectedPost.id + 1;
@@ -46,6 +54,7 @@ function SelectedPost() {
           <Subtitle className={topic === 'light' ? 'subtitle' : 'subtitle_dark'} text="Home |"></Subtitle>
           <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={` Post ${selectedPost.id}`}></Subtitle>
         </Link>
+        {status == "pending" ? <h1>Loading</h1> : null}
         <Title className={topic === 'light' ? 'signIn' : 'signIn_dark'} text={selectedPost.title}></Title>
         <img className="post-image" src={selectedPost.image} alt="" />
         <div className={topic === 'light' ? 'text' : 'text_dark'}>{selectedPost.text}</div>
@@ -73,7 +82,7 @@ function SelectedPost() {
                 <div className={topic === 'light' ? 'navigation-text' : 'navigation-text_dark'}>Prev</div>
                 <Subtitle className={topic === 'light' ? 'subtitle_gray' : 'subtitle_dark'} text={previousPost?.title || ""} />
               </div>
-            </Link>
+            </Link> 
           )}
           {selectedPost.id < posts.length && (
             <Link className="navigation-right" to={`/post/${selectedPost.id + 1}`}>

@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice, current } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 import { IInitialState } from '../types/interfaces'
 
 
@@ -8,6 +7,23 @@ export const fetchBlog = createAsyncThunk(
   async function (_, { rejectWithValue }) {
     try {
       const responce = await fetch("https://studapi.teachmeskills.by/blog/posts/?limit=50");
+      if (!responce.ok) {
+        throw new Error("ERROR")
+      }
+      const data = await responce.json();
+      return data;
+    }
+    catch (error) {
+      return rejectWithValue((error as Error).message)
+    }
+  }
+)
+
+export const fetchOnePost = createAsyncThunk(
+  'blogofolio/fetchOnePost',
+  async function (id: string, { rejectWithValue }) {
+    try {
+      const responce = await fetch(`https://studapi.teachmeskills.by/blog/posts/${id}/`);
       if (!responce.ok) {
         throw new Error("ERROR")
       }
@@ -52,7 +68,8 @@ export const blogofolioSlice = createSlice({
     selectedTab: "All",
     status: null,
     error: null,
-    blogs: []
+    blogs: [],
+    selectedPost: null
   },
   reducers: {
     increment: (state: IInitialState) => {
@@ -69,6 +86,7 @@ export const blogofolioSlice = createSlice({
       }
 
       state.favorites = [...state.favorites, payload]
+      alert("Пост добавлен в Favorites")
       console.log(current(state));
     },
     changeActiveTab: (state: IInitialState, { payload }) => {
@@ -77,19 +95,32 @@ export const blogofolioSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    return builder.addCase(fetchBlog.pending, (state: any) => {
+    return builder.addCase(fetchBlog.pending, (state: IInitialState) => {
       state.status = "pending";
       state.error = null;
     }),
-      builder.addCase(fetchBlog.fulfilled, (state: any, { payload }: { payload: any }) => {
+      builder.addCase(fetchBlog.fulfilled, (state: IInitialState, { payload }: { payload: any }) => {
         state.status = "fulfilled";
         state.blogs = payload.results;
         console.log(payload);
       }),
-      builder.addCase(fetchBlog.rejected, (state: any, { payload }: { payload: any }) => {
+      builder.addCase(fetchBlog.rejected, (state: IInitialState, { payload }: { payload: any }) => {
         state.status = "rejected";
         state.error = payload;
-      })
+      }),
+      builder.addCase(fetchOnePost.pending, (state: IInitialState) => {
+        state.status = "pending";
+        state.error = null;
+      }),
+        builder.addCase(fetchOnePost.fulfilled, (state: IInitialState, { payload }: { payload: any }) => {
+          state.status = "fulfilled";
+          state.selectedPost = payload;
+          console.log(payload);
+        }),
+        builder.addCase(fetchOnePost.rejected, (state: IInitialState, { payload }: { payload: any }) => {
+          state.status = "rejected";
+          state.error = payload;
+        })
   }
 })
 

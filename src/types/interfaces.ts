@@ -47,5 +47,6 @@ export interface IInitialState {
   selectedTab: string
   status: null | string,
   error: null | string,
-  blogs: [] | IPost[]
+  blogs: [] | IPost[],
+  selectedPost: any | IPost
 }
