@@ -19,6 +19,23 @@ export const fetchBlog = createAsyncThunk(
   }
 )
 
+export const searchResult = createAsyncThunk(
+  'blogofolio/searchResult',
+  async function (text: string, { rejectWithValue }) {
+    try {
+      const responce = await fetch(`https://studapi.teachmeskills.by/blog/posts/?limit=10&search=${text}`);
+      if (!responce.ok) {
+        throw new Error("ERROR")
+      }
+      const data = await responce.json();
+      return data;
+    }
+    catch (error) {
+      return rejectWithValue((error as Error).message)
+    }
+  }
+)
+
 export const fetchOnePost = createAsyncThunk(
   'blogofolio/fetchOnePost',
   async function (id: string, { rejectWithValue }) {
@@ -69,7 +86,8 @@ export const blogofolioSlice = createSlice({
     status: null,
     error: null,
     blogs: [],
-    selectedPost: null
+    selectedPost: null,
+    searchResultPosts: null
   },
   reducers: {
     increment: (state: IInitialState) => {
@@ -87,11 +105,9 @@ export const blogofolioSlice = createSlice({
 
       state.favorites = [...state.favorites, payload]
       alert("Пост добавлен в Favorites")
-      console.log(current(state));
     },
     changeActiveTab: (state: IInitialState, { payload }) => {
       state.selectedTab = payload;
-      console.log(state.selectedTab)
     }
   },
   extraReducers: (builder) => {
@@ -102,7 +118,6 @@ export const blogofolioSlice = createSlice({
       builder.addCase(fetchBlog.fulfilled, (state: IInitialState, { payload }: { payload: any }) => {
         state.status = "fulfilled";
         state.blogs = payload.results;
-        console.log(payload);
       }),
       builder.addCase(fetchBlog.rejected, (state: IInitialState, { payload }: { payload: any }) => {
         state.status = "rejected";
@@ -112,15 +127,27 @@ export const blogofolioSlice = createSlice({
         state.status = "pending";
         state.error = null;
       }),
-        builder.addCase(fetchOnePost.fulfilled, (state: IInitialState, { payload }: { payload: any }) => {
-          state.status = "fulfilled";
-          state.selectedPost = payload;
-          console.log(payload);
-        }),
-        builder.addCase(fetchOnePost.rejected, (state: IInitialState, { payload }: { payload: any }) => {
-          state.status = "rejected";
-          state.error = payload;
-        })
+      builder.addCase(fetchOnePost.fulfilled, (state: IInitialState, { payload }: { payload: any }) => {
+        state.status = "fulfilled";
+        state.selectedPost = payload;
+      }),
+      builder.addCase(fetchOnePost.rejected, (state: IInitialState, { payload }: { payload: any }) => {
+        state.status = "rejected";
+        state.error = payload;
+      }),
+      builder.addCase(searchResult.pending, (state: IInitialState) => {
+        state.status = "pending";
+        state.error = null;
+      }),
+      builder.addCase(searchResult.fulfilled, (state: IInitialState, { payload }: { payload: any }) => {
+        state.status = "fulfilled";
+        state.searchResultPosts = payload;
+        console.log(payload);
+      }),
+      builder.addCase(searchResult.rejected, (state: IInitialState, { payload }: { payload: any }) => {
+        state.status = "rejected";
+        state.error = payload;
+      })
   }
 })
 

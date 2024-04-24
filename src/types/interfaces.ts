@@ -40,6 +40,13 @@ export interface IInput {
   maxLength: number
 }
 
+export interface ISearchResultPosts {
+  count: number,
+  next: null | string,
+  previous: null | string,
+  results: IPost[]
+}
+
 export interface IInitialState {
   like: number,
   dislike: number,
@@ -48,5 +55,6 @@ export interface IInitialState {
   status: null | string,
   error: null | string,
   blogs: [] | IPost[],
-  selectedPost: any | IPost
+  selectedPost: null | IPost[],
+  searchResultPosts: ISearchResultPosts | null
 }
