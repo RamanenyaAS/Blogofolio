@@ -69,7 +69,7 @@ function AllPosts() {
           <div className="all-post-container">
             <div className="post-left">
               {posts.slice(startIndex, endIndex - 10).map((post: IPost) => (
-                <PostL post={post} />
+                <PostL data-testid="cypress-post-L" post={post} />
               ))}
               <div className="left-block">
                 {posts.slice(startIndex + 1, endIndex - 6).map((post: IPost) => (

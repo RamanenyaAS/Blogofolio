@@ -3,12 +3,10 @@ import IconLike from '../../image/IconLike.svg';
 import IconLikeDark from '../../image/IconLikeDark.svg';
 import IconDislike from '../../image/IconDislike.svg';
 import IconDislikeDark from '../../image/IconDislikeDark.svg';
-import IconPostL from '../../image/IconPostL.svg';
 import IconMore from '../../image/IconMore.svg';
 import IconMoreDark from '../../image/IconMoreDark.svg';
 import IconFavorites from '../../image/IconFavorites.svg';
 import IconFavoritesDark from '../../image/IconFavoritesDark.svg';
-import { posts } from '../../data'
 import { ThemeContext } from '../../providers/myContext';
 import { useContext } from 'react';
 import { IPost } from '../../types/interfaces';
@@ -19,7 +17,6 @@ import { Link } from 'react-router-dom';
 
 function PostL({ post }: { post: IPost }) {
 
-  const [{ id, image, text, date, lesson_num, title, description, author }] = posts;
   const [topic] = useContext(ThemeContext);
 
   const dispatch = useDispatch();
@@ -37,7 +34,7 @@ function PostL({ post }: { post: IPost }) {
 
   return (
     <>
-      <div className="post-container">
+      <div  data-testid="cypress-post-L" className="post-container">
         <Link className='link' key={post.id} to={`/post/${post.id}`}>
           <div className="post-block">
             <div className="postL-left">

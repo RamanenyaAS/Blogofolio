@@ -3,8 +3,6 @@ import '../../components/Subtitle/Subtitle.css'
 import '../SignUpFormPage/SignUpForm.css'
 import Subtitle from '../../components/Subtitle/Subtitle';
 import Title from '../../components/Title/Title';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import { useContext, useState } from 'react';

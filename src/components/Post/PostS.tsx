@@ -20,8 +20,14 @@ function PostS({ post }: { post: IPost }) {
   const [topic] = useContext(ThemeContext);
 
   const dispatch = useDispatch();
-  const reactions: any = useSelector((state) => state)
+  const reactions: any = useSelector((state) => state )
 
+  const addLike = () => {
+    dispatch(increment())
+  }
+  const addDislike = () => {
+    dispatch(decrement())
+  }
   const addToFavorites = () => {
     dispatch(addToFavorite(post))
   }
@@ -43,8 +49,8 @@ function PostS({ post }: { post: IPost }) {
         </Link>
         <div className="post-block">
           <div className="bottom-left">
-            {topic === "light" ? <img className="post-icon" src={IconLike} alt="Icon Like" /> : <img className="post-icon" src={IconLikeDark} alt="Icon Like" />}
-            {topic === "light" ? <img className="post-icon" src={IconDislike} alt="Icon Dislike" /> : <img className="post-icon" src={IconDislikeDark} alt="Icon Dislike" />}
+            {topic === "light" ? <img onClick={addLike} className="post-icon" src={IconLike} alt="Icon Like" /> : <img onClick={addLike} className="post-icon" src={IconLikeDark} alt="Icon Like" />}
+            {topic === "light" ? <img onClick={addDislike} className="post-icon" src={IconDislike} alt="Icon Dislike" /> : <img onClick={addDislike} className="post-icon" src={IconDislikeDark} alt="Icon Dislike" />}
           </div>
           <div className="bottom-right">
             {topic === "light" ? <img onClick={addToFavorites} className="post-icon" src={IconFavorites} alt="Icon Favorites" /> : <img onClick={addToFavorites} className="post-icon" src={IconFavoritesDark} alt="Icon Favorites" />}

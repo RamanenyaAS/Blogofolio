@@ -4,8 +4,7 @@ import IconNext from '../image/IconNext.svg';
 import IconPrevDark from '../image/IconPrevDark.svg';
 import IconNextDark from '../image/IconNextDark.svg';
 import PostS from "../components/Post/PostS";
-import { posts } from "../data"
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../providers/myContext";
 import { useSelector } from "react-redux";
 import { IInitialState, IPost } from "../types/interfaces";
@@ -17,6 +16,8 @@ function SearchPage() {
 
   const data = useSelector((state: IInitialState) => state.searchResultPosts);
   const status = useSelector((state: IInitialState) => state.status);
+  const posts: IPost[] = useSelector((state: IInitialState) => state.blogs)
+
 
   const postsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);

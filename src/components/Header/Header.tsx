@@ -9,7 +9,7 @@ import IconMoonActive from '../../image/IconMoonActive.svg'
 import IconSunActive from '../../image/IconSunActive.svg'
 import IconSun from '../../image/IconSun.svg'
 import { useContext, useState } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 import { ThemeContext } from '../../providers/myContext';
 import { useDispatch } from 'react-redux';
@@ -57,9 +57,9 @@ function Header() {
 
 
   return (
-    <header className="header">
+    <header data-testid="cypress-header" className="header">
       <div className="header-block">
-        {isOpen === false ? <img className="header-burger" onClick={toggleDropdown} src={IconBurger} alt="Burger" /> : <img className="header-close" onClick={toggleDropdown} src={IconClose} alt="Cross" />}
+        {isOpen === false ? <img data-testid="cypress-header-burger" className="header-burger" onClick={toggleDropdown} src={IconBurger} alt="Burger" /> : <img data-testid="cypress-header-burger" className="header-close" onClick={toggleDropdown} src={IconClose} alt="Cross" />}
         {isOpen && (
           <div className="dropdown-block">
             <ul className="dropdown-block-list">
@@ -68,7 +68,7 @@ function Header() {
                 <Link to="/" className="link">Home</Link>
               </div>
               <div className="header__navigation">
-                <Link to="/add" className="link">Add post</Link>
+                <Link data-testid="cypress-header-burger-add-post-button" to="/add" className="link">Add post</Link>
               </div>
               <div className="theme-block">
                 {topic === "light" ? <img className="theme-block__image" src={IconSunActive} alt="Icon Sun Active" /> : <img className="theme-block__image" src={IconSun} alt="Icon Sun" onClick={lightTopic} />}

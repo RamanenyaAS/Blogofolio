@@ -6,7 +6,6 @@ import IconFavorites from '../../image/IconFavorites.svg';
 import IconPrev from '../../image/IconPrev.svg';
 import IconNext from '../../image/IconNext.svg';
 import IconPrevDark from '../../image/IconPrevDark.svg';
-// import { posts } from '../../data';
 import IconNextDark from '../../image/IconNextDark.svg';
 import Subtitle from "../../components/Subtitle/Subtitle";
 import Title from "../../components/Title/Title";

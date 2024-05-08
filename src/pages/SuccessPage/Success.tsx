@@ -4,9 +4,7 @@ import '../../components/Subtitle/Subtitle.css'
 import Subtitle from '../../components/Subtitle/Subtitle';
 import Title from '../../components/Title/Title';
 import Template from '../../components/Template/Template';
-import Header from '../../components/Header/Header';
 import Button from '../../components/Button/Button';
-import Footer from '../../components/Footer/Footer';
 import { ThemeContext } from '../../providers/myContext';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
